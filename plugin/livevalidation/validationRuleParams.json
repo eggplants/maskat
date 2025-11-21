@@ -1,0 +1,22 @@
+{
+	"failureMessage":      { "type": "string" },
+	"notANumberMessage":   { "type": "string" },
+	"notAnIntegerMessage": { "type": "string" },
+	"tooHighMessage":      { "type": "string" },
+	"tooLowMessage":       { "type": "string" },
+	"wrongNumberMessage":  { "type": "string" },
+	"tooLongMessage":      { "type": "string" },
+	"tooShortMessage":     { "type": "string" },
+	"wrongLengthMessage":  { "type": "string" },
+			
+	"is":      { "type": "number" },
+	"maximum": { "type": "number" },
+	"minimum": { "type": "number" },
+		
+	"onlyInteger":  { "type": "boolean", "defaultValue": false },
+	"allowNull":    { "type": "boolean", "defaultValue": false },
+	"partialMatch": { "type": "boolean", "defaultValue": false },
+	"match":   { "type": "string" },
+	"pattern": { "type": "RegExp" },
+	"within":  { "type": "string" }
+}

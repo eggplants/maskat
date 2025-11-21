@@ -1,0 +1,58 @@
+
+.DivText{        
+    position:absolute;        
+    top:3px;	
+    font-family: arial;
+    font-size: 9pt;    
+    overflow: hidden;
+    white-space: nowrap;                    
+/* fx    text-overflow: ellipsis; */
+    font-weight: normal;    
+    cursor: pointer; 
+   }
+
+.textSel{    
+    color: #00CCFF;    
+    font-weight: bold;
+  
+}
+
+
+.NodeSel{    
+    font-weight: bold;
+}
+
+
+.Tree_DIVSUP{    
+    white-space: nowrap;                    
+/* fx    text-overflow: ellipsis;     */
+}
+
+.divTree{                        
+    position:relative;
+    font-size:0;
+}
+
+.divLeaf{                
+    height:25px;
+}
+
+.divFloat{
+    display:inline;
+}
+
+.imgTreeview{ 
+	overflow:hidden;   
+    position:absolute;        
+    width:19px;   
+    height:23px; 
+}
+
+.treeDivDD{
+   z-index:1000;
+   font-size:0; 
+   position:absolute;  
+   height:2px;
+   width:40px;
+   background-color:#99CCFF;
+}

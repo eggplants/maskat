@@ -1,0 +1,322 @@
+/*-----------  elements du scroll ----------------------------------------------*/
+.valeursDef {
+    width : 17px; 
+    display:none;
+}
+
+
+.ascenseurHaut {
+                     background-image:url('../images/scroll/ascenseurHaut.gif');
+                     width : 17px;
+                     height : 50%;
+                     background-position: 0% 0%;
+                     background-repeat : no-repeat;
+                     }
+.ascenseurBas {
+                     background-image : url('../images/scroll/ascenseurBas.gif');
+                     width : 17px;
+                     height :51%;  /* 51% le 1% pour Mozilla !  cette modif (51) semvble lié à la taille
+                     de la fleche haute (18 au lieu de 19), à suivre */
+/* fonctionne également:                     background-position: 100% 100%; */
+                     background-position: bottom;
+                     background-repeat : no-repeat;
+}
+
+.ascenseurCentre {
+                     background-image:url('../images/scroll/ascenseurCentre.gif');
+                     width : 17px;
+                     background-position: 0% 0%;
+                     background-repeat : repeat;
+                     }
+
+.zoneAscHautFleche {
+                     background-image:url('../images/scroll/ascenseurHautFleche.gif');
+                     width : 17px;
+                     height : 19px;  
+/*                     display: inline;   */
+/*                     float: right;      */
+                     }
+.zoneAscBasFleche {
+                     background-image:url('../images/scroll/ascenseurBasFleche.gif');
+                     width : 17px;
+                     height : 19px;
+/*                     display: inline; */
+/*                     float: right;    */
+                     }
+.zoneBasFlecheDirect {
+                     background-image:url('../images/scroll/ascenseurBasFlecheDirect.gif');
+                     width : 17px;
+                     height : 19px;
+                     }
+.zoneHautFlecheDirect {
+                     background-image:url('../images/scroll/ascenseurHautFlecheDirect.gif');
+                     width : 17px;
+                     height : 19px;  
+                     }
+.dansZoneAccesHB {
+                     display: inline;
+                     float: right;
+                     height : 18px; /* 18 au lieu de 19 nécessaire pour Moz lorsque ascenseur à gche et AccesHaut*/
+}
+
+/*-------------------------------------------------------------------*/
+.tokenFocus    {
+                 border : 1px black solid;
+                 background-color: pink; 
+                 font-size:14px; font-weight:bold;
+               }
+.token0Visible  { background-color: powderblue;
+               }
+.token1Visible  {  background-color: palegreen;
+               }
+.token2Visible  { background-color: silver;
+               }
+
+.tokenHidden   { background-color: gold;
+               }
+
+/*--------------------------------------------------------------------*/
+.outils {position:absolute;
+         background-color:red;
+}
+.actRech       { position:absolute; top:2px;
+/*background-color:gray;*/
+width:100px;
+}
+
+.optionRech { position:absolute; /*display:inline;  position:relative;*/
+                  top:2px;width:15px;height:15px;
+                  background-image:url('./images/pointsDeSusp.gif');
+                          border:1px solid rgb(120,172,255);
+}
+
+
+.motifRech      {
+                  position:absolute; top:2px;
+/*background-color:red; */
+width:100px;
+}
+
+.resRech     {
+                  position:absolute; top:0px;
+        border:1px solid rgb(120,172,255);    width:100px;
+/*background-color:green;   width:50px;*/
+}
+.echecRech, .texteLib, .nombre {  position:absolute; background-color:white;  top:4px;
+              color:black;
+              font-family:verdana;
+              font-size:9pt;
+}
+.nextPrevOcc     {
+                  position:absolute; top:1px;
+        border:1px solid rgb(120,172,255);    width:35px;
+/*background-color:green;   width:50px;*/
+}
+.decompte {position:absolute; top:0px;}
+.resRechIt,.resRechG {
+                  position:absolute; top:0px; width:100px;
+}
+
+/*--------------------------------------------------------------------*/
+.rondVert { position:absolute; /*display:inline;*/
+                  top:0px; left:0px;width:15px;height:20px;
+                  background-image:url('./images/rondVert.gif');
+}
+.arrowTopExist { position:absolute; /*display:inline;*/
+                  top:0px; left:0px;width:15px;height:20px;
+                  background-image:url('./images/arrowGreenTop.gif');
+}
+.arrowTop { position:absolute; /*display:inline;*/
+                  top:0px; left:0px;width:15px;height:20px;
+                  background-image:url('./images/arrowRedTop.gif');
+}
+.arrowBottomExist {position:absolute; /*display:inline; position:relative;*/
+                  top:0px; left:3px;width:15px;height:20px;
+                  background-image:url('./images/arrowGreenBottom.gif');
+                   background-position:top left;
+}
+.arrowBottom {position:absolute; /*display:inline;  position:relative;*/
+                  top:0px; left:3px;width:15px;height:20px;
+                  background-image:url('./images/arrowRedBottom.gif');
+                 /* background-position:50% 50%;*/
+}
+
+
+/*--------------------------------------------------------------------*/
+
+.container_AutoScroll { position:absolute;
+               /*  height: 300;*/
+                 background-color:lightgrey;
+               /* pour test  border:solid 10px black;*/
+               }
+
+
+.cadreEditeur  { position:absolute;
+               /*  height: 300;*/
+                 background-color:lightgrey;
+               /* pour test
+                border : solid 3px black;
+                 */
+               }
+
+.zoneAction    { background-color:lightgrey;
+                 width:100%; height:28px;
+                 /*overflow:visible;*/
+                 /*border : solid 3px red;*/
+                }
+               
+.zoneNavigListe    { /*background-color:green;*/
+                    /*background-color:#DFECF3 grisé */
+                    background-color:rgb(233,236,244);/* bleuté*/
+                    width:100%; height:20px;font-size:0.1em;
+                 /*overflow:visible;*/
+                 /*border : solid 3px red;*/
+                }
+.zoneNavigListeV    { /*background-color:green;*/
+                    /*background-color:#DFECF3 grisé */
+                    background-color:rgb(233,236,244);/* bleuté*/
+                    width:20px; height:100%;font-size:0.1em;
+                 /*overflow:visible;*/
+                 /*border : solid 3px red;*/
+                }
+.zoneNavigBuff    { background-color:orange;
+                 width:100%; height:20px;
+                 /*overflow:visible;*/
+                 /*border : solid 3px red;*/
+                }
+
+.zoneAffichageVisu {
+                }
+
+.zoneAccesHaut { background-color:rgb(131,172,188);
+                 width:100%; height:10px;
+                 font-size:0.1em;
+               }
+               
+.zoneAccesBas  { background-color:rgb(131,172,188);
+/*                 background-color: rgb(107,156,175);
+                 background-color: rgb(87,153,195);
+                 background-color: green;*/
+
+                 width:100%; height:10px;
+                 font-size:0.1em;
+               }
+/* attention : la classe suivante doit se situer après les 2 classes zoneAccesHaut|Bas pour fonctionner dans Mozilla */
+/* si elle se trouve avant : la hauteur prise sera 10px. */
+/*
+   ce qui signifie que Mozilla ne tient pas compte de l'ordre des noms de classes dans un nom composé (par ex. zoneAccesBas zoneAccesElargie)
+   mais de l'ordre d'apparition dans la feuille de style.
+*/
+/* augmentation de la hauteur pour utilisation en conjonction avec l 'ascenceur : */
+.zoneAccesElargie { height : 18px; }
+
+.zoneAscenseur{
+                       float:right;
+                       height : 100%;
+                       width : 17px;
+/*                       width : 5px;*/
+                      }
+.ascenseurWin {
+                     /*background-image:url('../images/scroll/ascenseurHaut.gif');*/
+                     /*position:absolute;*/
+                     top: 0px; left : 0px;
+                     width : 17px;
+                     height : 100%;
+                     background-color : rgb(63,187,239);
+/* fx                     font-size : '0.5em'; */
+                     font-size : 0.5em;   /* nécessaire uniquement pour IE / hauteur minimim d'une DIV'*/
+                     /*background-color : lightblue;*/
+                     /*background-position: 0% 0%;*/
+                     /*background-repeat : no-repeat;*/
+                     }
+.cursAscenseurWin {
+                     /*background-image:url('../images/scroll/ascenseurHaut.gif');*/
+                     position:absolute;
+                     top: 0px; left : 0px;     
+                     height : 10px;
+                     background-color : rgb(146,220,0);
+                     border : 1px black solid; /* fx outset*/
+                     font-size : 0.5em; /* fx */  /* nécessaire uniquement pour IE / hauteur minimim d'une DIV'*/
+                     /*background-color : lightblue;*/
+                     /*background-position: 0% 0%;*/
+                     /*background-repeat : no-repeat;*/
+                     }
+.etroit { width: 5px;
+}  
+.large { width: 17px;
+}  
+.etroitFleche { width: 5px;
+}  
+.largeFleche { width: 17px;
+}  
+/* invalide avec FireFox :
+.cstes { etroit: 5px;
+large: 17px;}             
+*/
+.posLeft {
+                       float:left;
+                      }
+.posRight {
+                    float:right;
+                      }
+
+.zoneTexte     { overflow:hidden;
+
+         /*       float:right; impossible sinon zoneAccesBas remonte*//* pb defil*/
+
+                 width:100%;
+                /* background-color:gold;*/
+                background-color:  	Lemonchiffon;
+              }
+
+.texte         { position:relative;
+/*clear:right;*/
+                 height:auto;
+/*                 width:236px;*/
+
+/*                 width:100%;*/
+/*                 clear: right;*/
+               /*  float:left;        */
+ /* for rialto                  background-color:pink;*/
+                 font-size:12px;
+                 padding-left : 10px;
+                 padding-right : 10px;
+               }
+.texteIE         { overflow-x : hidden; }
+/* sans doute a supprimer */               
+.xx         { position:relative;
+                overflow-x : hidden;
+/*clear:right;*/
+                 height:auto;
+/*                 width:236px;*/
+
+/*                 width:100%;*/
+/*                 clear: right;*/
+               /*  float:left;        */
+                 background-color:green;
+                 font-size:12px;
+                 padding-left : 10px;
+                 padding-right : 10px;
+               }
+.zoneDecalee  {
+               left:20px; /* a faire seult pour Moz 
+/*                 padding-left : 27px;*/
+}
+.texteDecale  {
+/*                 padding-left : 1px;*/
+}
+.masqueElt {display: none;}
+.masqueEltScroll {display: none;}
+/*
+regle {
+       position : absolute;
+       top:50px; left:200px;
+       background-color:green;
+       height : 20px;
+
+}
+*/
+/* commentaire suivant à réévaluer  */
+/* ds Mozilla overflow:hidden n'a pas d'effet sur le fils si il a l'attribut position:absolute*/
+/* par contre cela fonctionne avec position:relative */
+/* mais ne fonctionne pas avec IE si DOCTYPE activé !!!*/

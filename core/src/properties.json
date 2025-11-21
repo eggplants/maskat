@@ -1,0 +1,53 @@
+{
+	"core": {
+		"enabled": true,
+		"comm.sendInterval" : 100,
+		"comm.timeoutInterval" : 500,
+		"comm.poolSize" : 2,
+		"controller.src": "transition.xml",
+		"dialog.factory" : "maskat.ui.JavaScriptDialogFactory",
+		"log.popup.focus" : false,
+		"log.default.level" : "INFO",
+		"log.factory" : "maskat.log.SimpleLogFactory",
+		"variable.scope": "global",
+		"variable.widget": "unwrapped",
+		"schema.validation": true
+	},
+
+	"compat": {
+		"enabled": true
+	},
+
+	"html": {
+		"enabled": false
+	},
+
+	"google": {
+		"enabled": false,
+		"key": "ABQIAAAAO5Nb3VuDykOg5nova_pkqhTwM0brOpm-All5BF6PoaKBxRWWERQZFxOAnRNB3Rm8QDv0qHmvvuu26A"
+	},
+
+	"rialto": {
+		"enabled": false,
+		"isDebug": false,
+		"traceLevel": 0,	
+		"isTestVersion": false,
+		"language": "en",
+		"skin": "standart"
+	},
+
+	"log4javascript": {
+		"enabled": false
+	},
+
+	"livevalidation": {
+		"enabled": false,
+		"floatMessageMarginTop": 10,
+		"floatMessageMarginLeft": 10,
+		"floatMessageMarginRight": 20
+	},
+
+	"maskat": {
+		"enabled": false
+	}
+}

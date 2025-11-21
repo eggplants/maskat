@@ -1,0 +1,100 @@
+
+.divMenu {
+    padding-top:3px;    
+    background-color:#D3E7F7;
+    border:1px outset white;
+    position:absolute;
+    white-space:nowrap;
+}
+
+.divMenuFixe {    
+    /*border:2px outset rgb(120,172,255);*/
+    border:1px inset white;
+    position:absolute;        
+    background-color: white;  
+}
+
+.fleche{
+   float:right;
+   position:absolute;
+   top:3;   
+}
+
+
+
+.textItem{
+   float:left;
+   position:relative;
+   height:100%;   
+   left:5px;
+   overflow:hidden;   
+/* fx   text-overflow:ellipsis;   */
+   white-space:nowrap;      
+   font-family:Arial,Helvetica,sans-serif;
+   cursor:pointer;
+   font-size: 13px;    
+}
+
+.textItemSel{
+    font-weight:bold;   
+}
+
+.imgItem{
+   
+   position:relative;
+   height:100%;
+   float:left;  
+}
+
+
+
+.divItemInactif{
+    /*background-color: menu;*/
+    height:100%;    
+    font-family: arial;
+    font-size: 13px;
+    color:inactivecaption;             
+}
+
+.divItemOn { 
+    background-color:#B0C4DE ;
+    color:highlighttext;   
+}
+
+.divItemInactifOn { 
+    background-color:#B0C4DE ;    
+}
+
+/***NOUVEAU MENU***/
+.imgItemMenu {    
+    position:relative;
+    float:left;
+    width:19px;
+    height:100%;
+    left:0;
+    font-size: 0.5em;                
+    
+}
+
+
+
+.itemMenuOff {            
+    /*background:white;    */
+    color:black;    
+}
+.itemMenuOn {            
+    background-color:#B0C4DE ;    
+    color:white;    
+}
+
+.itemText{            
+    float:left;        
+    height:100%;
+    position:relative;
+    cursor:pointer;    
+    font-family:arial;
+    font-size:10pt;
+    overflow:hidden;   
+/* fx    text-overflow:ellipsis;*/
+    white-space:nowrap;    
+    }

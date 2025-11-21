@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transitionDef>
+  <init>
+    <loadJS fileName="fruitshop.js" />
+    <loadLayout xmlFile="layout.xml" target="divMaskat" show="true" />
+    <loadValidation xmlFile="layout_v.xml" />
+  </init>
+</transitionDef>

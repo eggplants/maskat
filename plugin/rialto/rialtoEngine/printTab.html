@@ -1,0 +1,89 @@
+<html lang="fr">
+    <head>    
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <link rel="STYLESHEET" type="text/css" href="style/rialto.css"/>
+    <title></title>     
+    </head>
+
+         <script> 
+                              
+            
+function rempPage(obj){              
+
+ 
+    //REMPLISSAGE DU TITRE
+    var divTitre=document.getElementById("divTitre");
+    divTitre.innerHTML=obj.titre;
+
+    //CREATION DU TABLEAU
+    var tabTemp=new Array();    
+        
+    var tableau=document.getElementById("divTableau");                
+    tableau.style.display='block';               
+    //si tableau
+    if (obj.tabData){
+        //constitution de l'entete
+        tabTemp.push('<TABLE width="650" border="0" cellpadding="5" cellspacing="0" id="tableau">');
+        tabTemp.push('<TR class="tabImp">');
+        for (var i=0;i<obj.tabEntete.length;i++){                                                
+            tabTemp.push('<TD class="tabImp">'+obj.tabEntete[i]+'</TD>');
+        }
+        tabTemp.push('</TR>');
+        tabTemp.push('<TR><TD colspan="'+obj.NBCOL+'"><img src="images/impression/gris.gif" width="650" height="10"/></TD></TR>');                  
+        
+        
+        for (var i=0;i<obj.tabData.length;i++){                            
+            if (obj.tabData[i].sTexte){
+				tabTemp.push('<tr class="lineText"><td colspan="'+obj.NBCOL+'"><DIV>'+obj.tabData[i].sTexte.texte+'</DIV></td></tr>');                                                                     
+            }
+                        
+            //tabTemp.push('<TR class="tabImp">');
+            if(i!=0){
+                tabTemp.push('<tr><td colspan="'+obj.NBCOL+'"><img src="images/impression/gris_fonce.gif" width="650" height="1"/></td></tr>');
+            }
+            else{
+                tabTemp.push('<tr><td colspan="'+obj.NBCOL+'"></td></tr>');
+            }
+            tabTemp.push('<TR class="ligneImp">');
+            for (var j=0;j<obj.NBCOL;j++){ 
+                tabTemp.push('<td>'+obj.tabData[i][j]+'</td>');                
+            }
+            tabTemp.push('</TR>');            
+        }        
+        tabTemp.push('<TR><td colspan="'+obj.NBCOL+'"><img src="images/impression/gris.gif" width="650" height="10"/></td></tr>');
+        tabTemp.push('</TABLE>');
+        str=tabTemp.join('');        
+        tableau.innerHTML+=str;        
+    }
+   
+    //si Inner
+    if (obj.divInner){   
+    tableau.innerHTML=obj.divInner;
+    }                             
+}            
+</script> 
+<body style="overflow:auto;">
+
+<table width="650" border="0" cellspacing="0" cellpadding="5">
+  <tr width="650"> 
+    <td colspan="2" style="position:relative;">
+        <div class="tabImp" id="divTitre" style="position:absolute; left:20px;top:10px; width:480px;">            
+        </div>
+        <div class="ligneImp" id="divUser" style="position:absolute; left:500px;top:10px; width:232px;">            
+        </div>
+        <img id="logo" src="images/impression/gris.gif" width="650" height="30"/>
+    </td>
+  </tr>
+  <tr class="tabImp" width="650"> 
+    <td width="500"></td>
+    <td width="150" align="left" valign="top"><img src="images/impression/logo_pti.gif" style="left:0;"/></td>
+  </tr>
+  <tr width="650"> 
+    <td colspan="2"><img src="images/impression/gris.gif" width="650" height="10"/></td>
+  </tr>
+</table>
+
+<DIV width="650"  id="divTableau">  
+</DIV>
+</body>
+</html>

@@ -1,0 +1,441 @@
+.dockBar {
+    width : 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.buttonDB,.libelDB {
+    float:left;
+    position: relative;
+    top:4px;
+    margin-left:3px;
+    margin-right:3px;
+    
+}  
+.buttonDBV,.libelDBV {
+    top:4px;
+    margin-left:3px;
+    margin-top:3px;
+    margin-bottom:3px;
+}    
+.buttonDB,.buttonDBV {
+    /*display : inline; W3C -> width et height inopérants avec inline*/
+    width : 20px;
+    height: 20px;
+}  
+
+.libelDB,.libelDBV {
+    top:1px;
+    width:auto;
+    height:13px;
+    font-family:verdana;
+    font-size:10pt;
+    vertical-align:top;
+    white-space:nowrap; /* aj imp can*/
+/* fx    text-overflow:ellipsis;  */
+}
+.DB_border{
+    border : 1px solid blue;
+    top:2px;
+    padding-bottom:2px;
+    padding-right:2px;
+}    
+
+.tableau_Div3D {
+        position:absolute;
+/* fx        cellSpacing:0;
+        cellPading:0;
+*/
+        border:0px;
+        border-collapse:collapse;
+/*        table-layout:fixed;*/
+}
+
+
+.td_Div3D {
+         width:15px;
+         height:15px;
+}
+
+
+.div3D_DivTitre {
+ font-family:arial;
+ font-size:14pt;
+ font-weight:bold;
+ color:#0066CC;
+}
+
+.titreFenetre,.scdTitreFenetre {
+ white-space:nowrap;
+ overflow:hidden;
+/* fx text-overflow:ellipsis;*/
+ font-family:arial;
+ font-size:10pt;
+ font-weight:bold;
+/* color:#0066CC;*/
+}
+/*--- input field -----*/
+.pinkHelpButton {
+	background: url(../images/help1.gif) no-repeat;
+	width:25px;
+	height:24px;
+}
+.redHelpButton {
+	background: url(../images/help2.gif) no-repeat;
+	width:25px;
+	height:24px;
+}
+
+/*---- calendar------- */
+.redCloseButtonOff {
+	background: url(../images/imgFenSimple/bouton_fermer_off.gif) no-repeat;
+	width:16px;
+	height:17px;
+}
+.grayCloseButtonOn {
+	background: url(../images/imgFenSimple/bouton_fermer_on.gif) no-repeat;
+	width:16px;
+	height:17px;
+}
+
+/*--- Grid -------- */
+.leftEdgeRoundDashBoard {
+	background: url(../images/imgTableau/moniteur_arrondi_g.gif) no-repeat;
+	width:22px;
+	height:24px;
+}
+.rightEdgeRoundDashBoard {
+	background: url(../images/imgTableau/moniteur_arrondi_d.gif) no-repeat;
+	width:22px;
+	height:24px;
+}
+
+/*--- Combo ------- */
+.bigDownArrow {
+	background: url(../images/fleches/fleche-bas2.gif) no-repeat;
+	width:15px;
+	height:20px;
+}
+.bigUpArrow {
+	background: url(../images/fleches/fleche-haut2.gif) no-repeat;
+	width:15px;
+	height:20px;
+}
+
+/*---------------- SimpleWindow -----------  */
+.iconeSimpleWindow {
+	background: url(../images/imgFenSimple/picto-gr_default.gif) no-repeat;
+	width:21px;
+	height:23px;	
+}
+
+/* --------------- Tab --------------------  */
+.crossCloseOff {
+	background: url(../images/croix.gif) no-repeat;
+	width:12px;
+	height:11px;
+}
+.crossCloseOn {
+	background: url(../images/croix_on.gif) no-repeat;
+	width:12px;
+	height:11px;
+}	
+.leftArrowGroundlessOff {
+	background: url(../images/fleches/flech_g_sob_off.gif) no-repeat;
+	width:13px;
+	height:13px;
+}	
+.leftArrowGroundlessOn {
+	background: url(../images/fleches/flech_g_sob_on.gif) no-repeat;
+	width:13px;
+	height:13px;
+}	
+.tabListOn {
+	background: url(../images/boutons/parcourir_on.gif) no-repeat;
+	width:13px;
+	height:13px;
+}
+.tabListOff {
+	background: url(../images/boutons/parcourir_off.gif) no-repeat;
+	width:13px;
+	height:13px;
+}
+.rightArrowGroundlessOff {
+	background: url(../images/fleches/flech_d_sob_off.gif) no-repeat;
+	width:13px;
+	height:13px;
+}	
+.rightArrowGroundlessOn {
+	background: url(../images/fleches/flech_d_sob_on.gif) no-repeat;
+	width:13px;
+	height:13px;
+}
+.rightArrowOff {
+	background: url(../images/fleches/flech_d_off.gif) no-repeat;
+	width:13px;
+	height:13px;
+}	
+.rightArrowOn {
+	background: url(../images/fleches/flech_d_on.gif) no-repeat;
+	width:13px;
+	height:13px;
+}	
+.leftArrowOff {
+	background: url(../images/fleches/flech_g_off.gif) no-repeat;
+	width:13px;
+	height:13px;
+}	
+.leftArrowOn {
+	background: url(../images/fleches/flech_g_on.gif) no-repeat;
+	width:13px;
+	height:13px;
+}	
+	
+.tabListIndex {
+	background: url(../images/imgOnglet/tirette_onglet.gif);
+	width:13px;
+	height:30px;
+
+}
+
+/* ----------- Frame -------------------------------*/
+ 
+.frmImgG{
+	font-size: 0.5em;
+	border:1px solid green;
+	background: url(../images/imgCadre/bord_g.gif) no-repeat;
+	width:4px;
+	height:25px;
+ 	
+}
+
+.frmFond{
+	background: url(../images/imgCadre/centre.gif) repeat;	
+	height:25px; 	
+}
+
+
+.frmImgD{
+	font-size: 0.5em;
+ 	border:1px solid green;
+	background: url(../images/imgCadre/bord_d.gif) no-repeat;
+	width:4px;
+	height:25px;
+ 	
+}
+
+.moreButtonOff {
+	background: url(../images/boutons/bouton_plus_off.gif) no-repeat;
+	width:17px;
+	height:17px;
+}
+.moreButtonOn {
+	background: url(../images/boutons/bouton_plus_on.gif) no-repeat;
+	width:17px;
+	height:17px;
+}
+.lessButtonOff {
+	background: url(../images/boutons/bouton_moins_off.gif) no-repeat;
+	width:17px;
+	height:17px;
+}
+.lessButtonOn {
+	background: url(../images/boutons/bouton_moins_on.gif) no-repeat;
+	width:17px;
+	height:17px;
+}
+.maxButtonOff {
+	background: url(../images/boutons/icon-agrandir.gif) no-repeat;
+	width:20px;
+	height:19px;
+}
+.maxButtonOn {
+	background: url(../images/boutons/icon-agrandir_on.gif) no-repeat;
+	width:20px;
+	height:19px;
+}
+
+.minButtonOff {
+	background: url(../images/boutons/icon-multifenetre.gif) no-repeat;
+	width:20px;
+	height:19px;
+}
+.minButtonOn {
+	background: url(../images/boutons/icon-multifenetre_on.gif) no-repeat;
+	width:20px;
+	height:19px;
+}
+
+
+.printButtonOff {
+	background: url(../images/boutons/bouton_imprimer_off.gif) no-repeat;
+	width:81px;
+	height:17px;
+}
+.printButtonOn {
+	background: url(../images/boutons/bouton_imprimer_on.gif) no-repeat;
+	width:81px;
+	height:17px;
+}
+.fond {
+	background: url(../images/imgDiv3D/fond.gif) no-repeat;
+}
+
+
+/* --------  Button ------------------------------ */
+.bigInactiveButton {
+	background: url(../images/boutons/bouton_inactif_gr.gif) no-repeat;
+	width:88px;
+	height:18px;
+}
+.bigButtonOn {
+	background: url(../images/boutons/bouton_on_gr.gif) no-repeat;
+	width:88px;
+	height:18px;
+}
+.bigButtonOff {
+	background: url(../images/boutons/bouton_off_gr.gif) no-repeat;
+	width:88px;
+	height:18px;
+}
+
+/* --- Editeur : boutons utilisés pour la navigation dans la liste des docts liés*/
+.btonFirstDoctOn, .btonFirstDoctOff,.btonFirstDoctSobOn, .btonFirstDoctSobOff,
+.btonLastDoctOn, .btonLastDoctOff,.btonLastDoctSobOn, .btonLastDoctSobOff,
+.btonPrevDoctOn, .btonPrevDoctOff,.btonPrevDoctSobOff,.btonPrevDoctSobOn,
+.btonNextDoctOn, .btonNextDoctOff,.btonNextDoctSobOff,.btonNextDoctSobOn,
+.espaceSepNavigListeOn, .espaceSepNavigListeOff,
+.btonFinListeOn,.btonFinListeOff,.btonFinListeSobOn,.btonFinListeSobOff
+{
+    height: 13px;
+    width:13px;
+}
+/* fleches First doct */
+div.btonFirstDoctOn {
+    background: url(../images/fleches/flechplus_g_on.gif) no-repeat;
+}
+div.btonFirstDoctOff {
+    background: url(../images/fleches/flechplus_g_off.gif) no-repeat;
+    width : 13px;
+    height: 13px;
+}
+div.btonFirstDoctSobOn {
+    background: url(../images/fleches/flechplus_g_sob_on.gif) no-repeat;
+}
+div.btonFirstDoctSobOff {
+    background: url(../images/fleches/flechplus_g_sob_off.gif) no-repeat;
+}
+
+/* fleches Prev doct */
+div.btonPrevDoctOn {
+    background: url(../images/fleches/flech_g_on.gif) no-repeat;
+}
+div.btonPrevDoctOff {
+    background: url(../images/fleches/flech_g_off.gif) no-repeat;
+}
+div.btonPrevDoctSobOn {
+    background: url(../images/fleches/flech_g_sob_on.gif) no-repeat;
+}
+div.btonPrevDoctSobOff {
+        background: url(../images/fleches/flech_g_sob_off.gif) no-repeat;
+}
+/* fleches Next doct */
+div.btonNextDoctOn {
+    background: url(../images/fleches/flech_d_on.gif) no-repeat;
+}
+div.btonNextDoctOff {
+    background: url(../images/fleches/flech_d_off.gif) no-repeat;
+}
+div.btonNextDoctSobOn {
+    background: url(../images/fleches/flech_d_sob_on.gif) no-repeat;
+}
+div.btonNextDoctSobOff {
+    background: url(../images/fleches/flech_d_sob_off.gif) no-repeat;
+}
+/* fleches Last doct */
+div.btonLastDoctOn {
+    background: url(../images/fleches/flechplus_d_on.gif) no-repeat;
+}
+
+div.btonLastDoctOff {
+    background: url(../images/fleches/flechplus_d_off.gif) no-repeat;
+}
+/* fleches fin Liste */
+div.btonFinListeOn {
+    background: url(../images/fleches/flechplus_d_on.gif) no-repeat;
+}
+div.btonFinListeOff {
+    background: url(../images/fleches/flechplus_d_off.gif) no-repeat;
+}
+div.btonFinListeSobOff {
+    background: url(../images/fleches/flechplus_d_sob_off.gif) no-repeat;
+}
+div.btonFinListeSobOn {
+    background: url(../images/fleches/flechplus_d_sob_on.gif) no-repeat;
+}
+
+/****************************************/
+div.btonHidden,
+
+div.btonModeOnglOff,   div.btonModeOnglOn,
+
+div.btonFenReducOff,   div.btonFenReducOn,
+div.btonFenRestaurOff, div.btonFenRestaurOn,
+div.btonFenMaxOff, div.btonFenMaxOn,
+div.btonFenFermOff,    div.btonFenFermOn,
+
+div.btonModeFenOff,   div.btonModeFenOn
+{
+    height: 19px;
+    width:20px;
+}
+div.btonHidden {
+    display:none;
+    background: url(../images/imgFenSimple/transparent.gif) no-repeat;
+}
+
+div.btonModeOnglOn {
+    background: url(../images/boutons/icon-fenetre_on.gif) no-repeat;
+}
+div.btonModeOnglOff {
+    background: url(../images/boutons/icon-fenetre.gif) no-repeat;
+}
+
+div.btonFenReducOn {
+    background: url(../images/boutons/icon-reduir_on.gif) no-repeat;
+}
+div.btonFenReducOff {
+    background: url(../images/boutons/icon-reduir.gif) no-repeat;
+}
+div.btonFenRestaurOn {
+    background: url(../images/boutons/icon-multifenetre_on.gif) no-repeat;
+}
+div.btonFenRestaurOff {
+    background: url(../images/boutons/icon-multifenetre.gif) no-repeat;
+}
+div.btonFenMaxOn {
+    background: url(../images/boutons/icon-agrandir_on.gif) no-repeat;
+}
+div.btonFenMaxOff {
+    background: url(../images/boutons/icon-agrandir.gif) no-repeat;
+}
+div.btonFenFermOn {
+    background: url(../images/boutons/icon-fermer_on.gif) no-repeat;
+}
+div.btonFenFermOff {
+    background: url(../images/boutons/icon-fermer.gif) no-repeat;
+    width:20px;
+    height:19px;
+}
+
+div.btonModeFenOn {
+    background: url(../images/boutons/icon-multifenetre_on.gif) no-repeat;
+}
+div.btonModeFenOff {
+    background: url(../images/boutons/icon-multifenetre.gif) no-repeat;
+}
+/* ne fonctionne pas avec IE : */
+div.btonFenReduc:hover {
+    height: 19px;
+    width:20px;
+    background: url(../images/boutons/icon-reduir_on.gif) no-repeat;
+}

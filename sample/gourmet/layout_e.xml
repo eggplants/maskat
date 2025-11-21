@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventDef>
+  <remoteUrl url="./search_restaurant@SUFFIX@"/>
+  <eventRef id="searchRestaurant">
+    <param rootNode="request">
+      <source obj="budgetLowerLimitCombo" node="budgetLowerLimit"/>
+      <source obj="budgetUpperLimitCombo" node="budgetUpperLimit"/>
+      <source obj="westernCheckbox" node="western"/>
+      <source obj="japaneseCheckbox" node="japanese"/>
+      <source obj="chineseCheckbox" node="chinese"/>
+      <source obj="couponCheckbox" node="coupon"/>
+    </param>
+    <result rootNode="response">
+      <target out="searchResultGrid" in="restaurants" inkey="restaurant">
+        <bind node="name" tokey="0"/>
+        <bind node="style" tokey="1"/>
+        <bind node="budget" tokey="2"/>
+        <bind node="coupon" tokey="3"/>
+        <bind node="latitude" tokey="lat"/>
+        <bind node="longitude" tokey="lng"/>
+        <bind node="description" tokey="description"/>
+      </target>
+      <target out="map" in="restaurants" inkey="restaurant" teleType="setMarkers">
+        <bind node="latitude" tokey="lat"/>
+        <bind node="longitude" tokey="lng"/>
+        <bind node="name" tokey="text"/>
+      </target>
+    </result>
+  </eventRef>
+  <component id="budgetLowerLimitCombo">
+    <event id="onclick" ref="searchRestaurant"/>
+  </component>
+  <component id="budgetUpperLimitCombo">
+    <event id="onclick" ref="searchRestaurant"/>
+  </component>
+  <component id="westernCheckbox">
+    <event id="onclick" ref="searchRestaurant"/>
+  </component>
+  <component id="japaneseCheckbox">
+    <event id="onclick" ref="searchRestaurant"/>
+  </component>
+  <component id="chineseCheckbox">
+    <event id="onclick" ref="searchRestaurant"/>
+  </component>
+  <component id="couponCheckbox">
+    <event id="onclick" ref="searchRestaurant"/>
+  </component>
+  <component id="searchResultGrid">
+    <event id="onclick" finish="focusOnMap" type="local"/>
+    <event id="ondblclick" finish="showDetailTab" type="local"/>
+  </component>
+</eventDef>

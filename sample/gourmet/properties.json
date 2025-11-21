@@ -1,0 +1,8 @@
+{
+	"core": {
+		"variable.widget": "wrapped"
+	},
+	"google": {
+		"enabled": true
+	}
+}

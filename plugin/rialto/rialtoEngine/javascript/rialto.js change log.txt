@@ -1,0 +1,72 @@
+﻿■rialto0.9 change log
+・maskatが独自にrialto0.9に変更を加えた箇所の一覧です。
+・それぞれ関連する関数名を記載しています。
+・詳細はrialto.jsをご確認ください。
+・修正箇所には、「//maskat start　　//maskat end」と記載しています。
+
+1. カレンダー機能を追加。日本語表記に対応。
+　rialto.I18N付近
+　rialto.widget.Text.prototype.afterOnBlur
+　rialto.widget.Text.prototype.checkDate
+　rialto.widget.Calendar.prototype.afterOnClick
+　rialto.widget.Calendar.prototype.fillCalendar
+　rialto.widget.GoogleCalendar(新規追加)
+　rialto.widget.GoogleCalendar.prototype.loadSpecialDate(新規追加)
+　rialto.widget.GoogleCalendar.prototype.refreshSpecialDate(新規追加)
+
+2. テキストボックスにデータタイプを追加。(DA、DT、FN)
+　rialto.widget.Text
+　rialto.widget.Text.prototype.adaptToContext
+　rialto.widget.Text.prototype.adaptAfterSizeChange
+　rialto.widget.Text.prototype.release
+　rialto.widget.Text.prototype.checkKeyPress
+　rialto.widget.Text.prototype.getValue
+　rialto.widget.Text.prototype.setEnable
+
+3. テキストボックス内で、先頭文字が半角空白の場合に、次に全角文字が入力された時の削除処理を追加。
+　rialto.string
+
+4. コンボボックスにonblurイベントを追加。
+　rialto.widget.Combo
+
+5. ラジオにdisable属性を追加。
+　rialto.widget.Radio.prototype.setEnable
+
+6. チェックボックスにdisable属性を追加。
+　rialto.widget.Checkbox.prototype.setEnable
+
+7. GUIオブジェクトscreem,confirmDialog,endDialogを追加。
+　rialto.utils.RialtoWriter.prototype.loadOneComponent
+
+8. rialto.utils.xml.parseObjectAsAttributeの属性値に「"」、「&」がある場合、それぞれ「"」を「&quot;」に変換、「&」を「&amp;」に変換する処理を追加。
+　rialto.utils.xml
+
+9. rialto.utils.RialtoWriter.prototype.parseAttributeToStringに「"」がある場合、「"」を「\"」に変換する処理を追加。
+　rialto.utils.xml
+
+10. IE上でDTDファイル解析を無効化する処理を追加。
+　rialto.utils.xml
+
+11. IEでautoResizableH,autoResizeParent属性を設定した場合の不具合修正。
+　rialto.widget.AbstractComponent.prototype.getNewParentHeight()
+
+12. セル編集中にランタイムエラーおよび編集中のタブ移動で文字が選択できない不具合
+　rialto.widget.Grid.prototype.afterOnDbleClick
+
+13. setEnableでコンボボックスの属性を変更した場合、縦幅が小さくなるの不具合
+　rialto.widget.Combo.prototype.setEnable
+
+14. スプリッタの分割ウインドウを右端まで移動させると1px程隙間が出来るの不具合
+　rialto.widget.Splitter.prototype.adaptToContext
+
+15. autoUp属性に「true」を設定し、小文字を入力すると文字が反映されないの不具合
+　rialto.widget.Text.prototype.checkKeyPress
+
+16. textのdatatype="A"以外の場合、キーボードからの貼り付けが出来ないの不具合対応(safariのみ)
+　rialto.widget.Text.prototype.checkKeyPress
+
+17.Gridが2列以上ある時、かつ行選択ができる場合、行を選択状態にすると1列目のセルにある文字がセル外まで下にずれる不具合対応（FF3系のみ）
+　修正箇所：defaultSkin.css  line：1485～1497
+
+18. コンボボックスをDisableに設定した場合、背景色が灰色にならない不具合
+　rialto.widget.Combo.prototype.setEnable

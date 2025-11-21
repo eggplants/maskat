@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maskat-plugin" default="build" basedir=".">
+
+  <property file="build.properties" />
+
+  <property name="build" value="${basedir}/build" />
+  <property name="lib" value="${basedir}/lib" />
+
+  <property name="plugin.dir" value="${basedir}/plugin/${plugin.name}" />
+  <property name="plugin.src" value="${plugin.dir}/src" />
+  <property name="target.dir" value="${build}/maskat/${plugin.name}" />
+  <property name="target.js" value="${target.dir}/plugin.js" />
+
+  <target name="prepare">
+    <tstamp>
+      <format property="TODAY_UK" pattern="yyyyMMdd" />
+    </tstamp>
+    <mkdir dir="${target.dir}"/>
+    <condition property="js.compress.enabled">
+      <istrue value="${js.compress}" />
+   	</condition>
+  </target>
+
+  <target name="build"
+          depends="compress,copy"
+          if="plugin.name"
+          description="プラグインをビルドします。ビルド対象のプラグインを plugin.name プロパティで指定してください。"/>
+
+  <target name="compile" depends="prepare">
+    <concat destfile="${target.js}" append="false" encoding="${js.encoding}">
+      <fileset dir="${plugin.src}" includes="**/*.js" />
+    </concat>
+    <replace file="${target.js}"
+             token="@build@"
+             value="v${TODAY_UK}"
+             encoding="${js.encoding}" />
+  </target>
+
+  <target name="compress" depends="compile" if="js.compress.enabled">
+    <copy file="${target.js}" tofile="${target.js}.uncompressed" />
+    <java jar="${lib}/yuicompressor/yuicompressor-2.3.6.jar" fork="true">
+      <arg value="--type" />
+      <arg value="js" />
+      <arg value="--charset" />
+      <arg value="${js.encoding}" />
+      <arg value="-o" />
+      <arg file="${target.js}" />
+      <arg file="${target.js}.uncompressed" />
+    </java>
+  </target>
+
+  <target name="copy">
+    <copy todir="${target.dir}">
+      <fileset dir="${plugin.dir}">
+        <exclude name="src" />
+        <exclude name="src/**/*" />
+        <exclude name="test" />
+        <exclude name="test/**/*" />
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="clean"
+          if="plugin.name"
+          description="ビルドによって生成されたファイルを削除します。">
+    <delete dir="${target.dir}" />
+  </target>
+
+</project>

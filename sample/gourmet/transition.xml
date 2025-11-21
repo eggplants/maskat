@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transitionDef>
+  <init>
+    <loadJS fileName="gourmet.js" />
+    <loadLayout xmlFile="layout.xml" target="divMaskat" show="true" />
+  </init>
+</transitionDef>

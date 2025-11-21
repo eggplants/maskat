@@ -1,0 +1,26 @@
+/***test toolbar***************/
+
+.leftEdgeToolbar {    
+    background-image: url(../images/imgCadre/bord_g.gif);
+    float:left;
+    font-size: 0.5em;    
+    top:0;
+    left:0;
+    width:4px;
+    height:25px;
+}
+
+.toolBarDiv{
+    background-image: url(../images/imgCadre/centre.gif);
+    height:25px;
+ }
+
+.rightEdgeToolbar {    
+    background-image: url(../images/imgCadre/bord_d.gif);
+    float:right;
+    font-size: 0.5em;    
+    top:0;
+    left:0;
+    width:4px;
+    height:25px;
+}

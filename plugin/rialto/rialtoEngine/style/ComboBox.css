@@ -1,0 +1,31 @@
+
+.combo-input{
+    border:1px solid rgb(120,172,255);
+    height:20px;
+    position:relative;
+    font-size:10pt;    
+    background-color:white;    
+    float:left;
+}
+
+
+
+.combo-bouton {    
+    position:relative;
+/* fx    cursor:hand;*/
+    cursor:pointer;        
+    width:15px;
+    height:20px;     
+    float:right;
+}
+
+
+
+.combo-list {
+    border:1px solid rgb(120,172,255);
+    background-color:white;
+    padding:1px;        
+    overflow:hidden;        
+    font-size:10pt;
+    font-family:arial;        
+}

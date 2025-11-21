@@ -1,0 +1,118 @@
+/*    styles de la forme fantomatique éventuellement utilisée lors d'un dragAndDrop */
+
+.DDinfoFrame {
+					  position:absolute;
+                      font-size : 0.7em;
+                      border: 1px  solid black; 
+                      background-color : gray;
+                      width : auto;
+                      height: 15px;
+                      color : white;
+}
+DIV.g_HL {
+	position : absolute;
+	font-size : 0.5em;
+	height:0px; 
+	clip : rect(0,auto,2,0);
+}	
+DIV.g_VL {
+	position : absolute;
+	font-size : 0.5em;
+	width:0px; 
+	clip : rect(0,2,auto,0);
+}	
+
+DIV.g_green 	 {border:1px solid green;}
+DIV.g_lightBlue  {border:1px solid lightBlue;}
+DIV.g_red 		 {border:1px solid red;}
+
+DIV.g_dashed 	 {border-style : dashed;}
+
+DIV.line {
+	position : absolute;
+	font-size : 0.5em;
+}	
+DIV.horizontal{
+	height:0px; 
+	border :5px solid gray;
+/*	clip : rect(0,auto,5,0);*/
+}
+DIV.vertical{
+	border :5px solid gray;
+	width:0px; 
+}
+DIV.greenBorder 	 {border:1px solid green;}
+DIV.aquamarineBorder {border:1px solid lightBlue;}
+DIV.redBorder 		 {border:1px solid red;}
+
+DIV.dashed {border-style : dashed;}
+
+
+
+/*  cadre en pointillés */
+DIV.ghostDD_frame,DIV.fantomeDD_cadre
+                    { position:absolute;
+                      font-size : 0.5em;
+                      border: 2px #C0C0FF dashed;
+                     /* visibility:hidden;*/
+                      display:none;
+                     }
+/*  a_plat coloré */
+DIV.ghostDD_rect
+                    { position:absolute;
+                      font-size : 0.5;
+                      background-color: #C0C0FF;
+                   /*  visibility:hidden; */
+                      display:none;
+		/*	border:2px solid red;*/
+                     }
+DIV.ghostDD_rect,DIV.fantomeDD_aPlat
+                    { position:absolute;
+                      font-size : 0.5;
+                      background-color: #C0C0FF;
+                   /*  visibility:hidden; */
+                      display:none;
+                     }
+                     
+DIV.ghostDD_icone_DD_def                 
+					{ position:absolute;
+                      font-size : 0.5;
+                      border: 1px  dashed red; /*#C0C0FF;*/
+                      width : 15px;
+                      height: 15px;
+                      display:none;
+                    }
+
+DIV.fantomeDD_iconeDD_1
+                    { position:absolute;
+                      font-size : 0.5;
+                      width : 15px;
+                      height: 15px;
+                      border : 1px green dashed;
+                      display:none;
+                    }
+                     
+DIV.maskSelectDD
+                    { position:absolute;
+                      font-size : 0.5;
+                      top : 0;
+                      left : 0;
+                      background-color : gold;
+                    }
+
+/*    styles de la forme fantomatique éventuellement utilisée lors d'un redimensionnement */
+
+/*  cadre en pointillés */
+DIV.fantomeRS_cadre
+                    { position:absolute;
+                      font-size : 0.5;
+                      border: 2px #C0C0FF dashed;
+                      visibility:hidden;
+                     }
+/*  a_plat coloré */
+DIV.fantomeRS_aPlat
+                    { position:absolute;
+                      font-size : 0.5;
+                      background-color: #C0C0FF;
+                      visibility:hidden;
+                     }

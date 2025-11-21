@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventDef>
+  <component id="searchCustomerButton">
+    <event id="onclick" remoteUrl="./search_customer@SUFFIX@">
+      <param rootNode="request">
+        <source obj="customerIdText" node="customerId"/>
+      </param>
+      <result rootNode="response">
+        <target out="customerName" in="name"/>
+        <target out="phoneNumber" in="phone"/>
+        <target out="faxNumber" in="fax"/>
+        <target out="zipCode" in="zip"/>
+        <target out="address" in="address"/>
+        <target out="contactPerson" in="contactPerson"/>
+      </result>
+    </event>
+  </component>
+  <component id="searchProductButton">
+    <event id="onclick" remoteUrl="./search_product@SUFFIX@">
+      <param rootNode="request">
+        <source obj="productIdText" node="productId"/>
+      </param>
+      <result rootNode="response">
+        <target out="productName" in="name"/>
+        <target out="unitPrice" in="unitPrice"/>
+      </result>
+    </event>
+  </component>
+  <component id="registOrderButton">
+    <event id="onclick" remoteUrl="./register_order@SUFFIX@" finish="orderComplete">
+      <param rootNode="request">
+        <source obj="customerIdText" node="customerId"/>
+        <source obj="orderDetailGrid" node="order" childNode="detail">
+          <bind node="productId" fromkey="0"/>
+          <bind node="quantity" fromkey="3"/>
+        </source>
+      </param>
+    </event>
+  </component>
+  <component id="addOrderDetailButton">
+    <event id="onclick" finish="addOrderDetail" type="local"/>
+  </component>
+  <component id="updateOrderListButton">
+    <event id="onclick" remoteUrl="./list_orders@SUFFIX@">
+      <param rootNode="request"/>
+      <result rootNode="response">
+        <target out="orderListGrid" in="orders" inkey="order">
+          <bind node="orderId" tokey="0"/>
+          <bind node="orderDate" tokey="1"/>
+          <bind node="customerId" tokey="2"/>
+          <bind node="customerName" tokey="3"/>
+          <bind node="totalAmount" tokey="4"/>
+        </target>
+      </result>
+    </event>
+  </component>
+  <component id="removeOrderDetailButton">
+    <event id="onclick" finish="removeOrderDetail" type="local"/>
+  </component>
+  <component id="manageCustomerTabItem">
+    <event id="onEnableTab" finish="clearNewCustomerData" type="local"/>
+  </component>
+  <component id="registNewCustomerButton">
+    <event id="onclick" remoteUrl="./register_customer@SUFFIX@" finish="registerCustomerComplete">
+      <param rootNode="request">
+        <source obj="newCustomerNameText" node="name"/>
+        <source obj="newPhoneNumberText" node="phone"/>
+        <source obj="newFaxNumberText" node="fax"/>
+        <source obj="newZipCodeText" node="zip"/>
+        <source obj="newAddressText" node="address"/>
+        <source obj="newContactPersonText" node="contactPerson"/>
+      </param>
+      <result rootNode="response">
+        <target out="newCustomerId" in="customerId"/>
+      </result>
+    </event>
+  </component>
+  <event id="onload" start="initLayout" type="local"/>
+</eventDef>

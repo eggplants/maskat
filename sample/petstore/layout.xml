@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layoutDef>
+  <layout name="petstore">
+    <evaluator name="expression" />
+    <tabFolder name="petstoreTabFolder" left="0" top="0" width="691" height="457" tabIndex="-1" isClosable="false" widthTabName="150">
+      <tabItem name="catalogTabItem" title="Pet Catalog">
+        <button name="fishButton" left="8" top="23" width="88" widthMin="88" title="Fishs" alt="fishButton" tabIndex="-1"/>
+        <button name="dogButton" left="8" top="43" width="88" widthMin="88" title="Dogs" alt="dogButton" tabIndex="-1"/>
+        <button name="iguanaButton" left="8" top="63" width="88" widthMin="88" title="Reptiles" alt="iguanaButton" tabIndex="-1"/>
+        <button name="catButton" left="8" top="83" width="88" widthMin="88" title="Cats" alt="catButton" tabIndex="-1"/>
+        <button name="birdButton" left="8" top="103" width="88" widthMin="88" title="Birds" alt="birdButton" tabIndex="-1"/>
+        <image name="birdMainImage" left="66" top="61" alternateText="birdMainImage" imageOn="" imageOut="images/bird_main.gif"/>
+        <image name="dogImage" left="54" top="301" alternateText="dogImage" imageOn="" imageOut="images/dog.gif"/>
+        <image name="fishImage" left="3" top="233" alternateText="fishImage" imageOn="" imageOut="images/fish.gif"/>
+        <image name="iguanaImage" left="143" top="321" alternateText="iguanaImage" imageOn="" imageOut="images/iguana.gif"/>
+        <image name="catImage" left="230" top="301" alternateText="catImage" imageOn="" imageOut="images/cat.gif"/>
+        <image name="birdImage" left="286" top="235" alternateText="birdImage" imageOn="" imageOut="images/bird.gif"/>
+        <grid name="productGrid" left="370" top="43" tabIndex="-1" height="121" lineHeight="16" rang="5">
+          <gridHeader width="80" title="Product ID" type="string"/>
+          <gridHeader width="160" title="Name" type="string"/>
+        </grid>
+        <tabFolder name="inventoryTabFolder" left="370" top="199" width="300" height="220" tabIndex="-1" isClosable="false" widthTabName="60">
+          <tabItem name="dummyItemTab" title="Item">
+            <label name="lblNew" left="10" top="19" text="No product selected."/>
+          </tabItem>
+        </tabFolder>
+        <label name="productLabel" left="370" top="19" text="Products:"/>
+        <label name="inventoryLabel" left="370" top="175" text="Inventory:"/>
+      </tabItem>
+      <tabItem name="cartTabItem" title="Shopping Cart">
+        <grid name="cartGrid" left="13" top="43" tabIndex="-1" height="337" lineHeight="16" rang="10">
+          <gridHeader width="80" title="Item ID" type="string"/>
+          <gridHeader width="80" title="Product ID" type="string"/>
+          <gridHeader width="280" title="Description" type="string"/>
+          <gridHeader width="70" title="Quantity" type="string"/>
+          <gridHeader width="70" title="List Price" type="string"/>
+        </grid>
+        <label name="totalPriceLabel" left="19" top="391" text="Total price:"/>
+        <text name="totalPriceText" left="94" top="391" width="80" tabIndex="0" datatype="N" disable="true" initValue=""/>
+        <label name="shoppingCartLabel" left="13" top="13" text="Your shopping cart:"/>
+        <button name="checkoutButton" left="442" top="391" width="88" widthMin="88" title="Checkout" alt="" tabIndex="-1"/>
+        <button name="continueButton" left="538" top="391" width="88" widthMin="88" title="Continue Shopping" alt="" tabIndex="-1"/>
+      </tabItem>
+    </tabFolder>
+  </layout>
+</layoutDef>

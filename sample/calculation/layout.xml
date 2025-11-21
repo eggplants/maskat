@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layoutDef>
+  <layout name="calculation">
+    <frame name="calculationFrame" left="12" top="24" width="577" height="157" title="四則演算アプリケーション">
+      <text name="leftOperandText" left="23" top="23" width="85" tabIndex="1" datatype="N"/>
+      <combo name="operatorCombo" left="119" top="23" width="50" tabIndex="2">
+        <comboItem text="+" value="+"/>
+        <comboItem text="-" value="-"/>
+        <comboItem text="*" value="*"/>
+        <comboItem text="/" value="/"/>
+      </combo>
+      <text name="rightOperandText" left="179" top="23" width="85" tabIndex="3" datatype="N"/>
+      <label name="equalLabel" left="275" top="23" text="="/>
+      <text name="resultText" left="299" top="23" width="85" tabIndex="4" datatype="N" disable="true"/>
+      <label name="calculationMethodLabel" left="23" top="59" text="計算方法:"/>
+      <label name="localDescriptionLabel" left="131" top="83" text="ブラウザ内部で JavaScript 関数を実行し、計算結果を表示します。"/>
+      <button name="localCalculateButton" left="23" top="83" title="ローカル"/>
+      <label name="remoteDescriptionLabel" left="131" top="107" text="サーバに HTTP 要求を送信し、サーバ側で実行した計算結果を表示します。"/>
+      <button name="remoteCalculateButton" left="23" top="107" title="リモート"/>
+    </frame>
+  </layout>
+</layoutDef>

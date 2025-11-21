@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventDef>
+  <component id="localCalculateButton">
+    <event id="onclick" finish="calculate" type="local"/>
+  </component>
+  <component id="remoteCalculateButton">
+    <event id="onclick" remoteUrl="./calculate@SUFFIX@" async="false">
+      <param rootNode="request">
+        <source obj="leftOperandText" node="leftOperand" type="byte" desc="パラメータ1"/>
+        <source obj="rightOperandText" node="rightOperand" type="byte" desc="パラメータ2"/>
+        <source obj="operatorCombo" node="operator"/>
+      </param>
+      <result rootNode="response">
+        <target out="resultText" in="result"/>
+      </result>
+    </event>
+  </component>
+</eventDef>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventDef>
+  <eventRef id="listFish">
+    <param rootNode="request">
+      <source obj="expression" node="categoryId" teleType="&apos;FI&apos;"/>
+    </param>
+    <result rootNode="response">
+      <target out="productGrid" in="products" inkey="product">
+        <bind node="productId" tokey="0"/>
+        <bind node="name" tokey="1"/>
+      </target>
+    </result>
+  </eventRef>
+  <eventRef id="listDog">
+    <param rootNode="request">
+      <source obj="expression" node="categoryId" teleType="&apos;K9&apos;"/>
+    </param>
+    <result rootNode="response">
+      <target out="productGrid" in="products" inkey="product">
+        <bind node="productId" tokey="0"/>
+        <bind node="name" tokey="1"/>
+      </target>
+    </result>
+  </eventRef>
+  <eventRef id="listIguana">
+    <param rootNode="request">
+      <source obj="expression" node="categoryId" teleType="&apos;RP&apos;"/>
+    </param>
+    <result rootNode="response">
+      <target out="productGrid" in="products" inkey="product">
+        <bind node="productId" tokey="0"/>
+        <bind node="name" tokey="1"/>
+      </target>
+    </result>
+  </eventRef>
+  <eventRef id="listCat">
+    <param rootNode="request">
+      <source obj="expression" node="categoryId" teleType="&apos;FL&apos;"/>
+    </param>
+    <result rootNode="response">
+      <target out="productGrid" in="products" inkey="product">
+        <bind node="productId" tokey="0"/>
+        <bind node="name" tokey="1"/>
+      </target>
+    </result>
+  </eventRef>
+  <eventRef id="listBird">
+    <param rootNode="request">
+      <source obj="expression" node="categoryId" teleType="&apos;AV&apos;"/>
+    </param>
+    <result rootNode="response">
+      <target out="productGrid" in="products" inkey="product">
+        <bind node="productId" tokey="0"/>
+        <bind node="name" tokey="1"/>
+      </target>
+    </result>
+  </eventRef>
+  <component id="fishButton">
+    <event id="onclick" ref="listFish" remoteUrl="search_product@SUFFIX@"/>
+  </component>
+  <component id="dogButton">
+    <event id="onclick" ref="listDog" remoteUrl="search_product@SUFFIX@"/>
+  </component>
+  <component id="iguanaButton">
+    <event id="onclick" ref="listIguana" remoteUrl="search_product@SUFFIX@"/>
+  </component>
+  <component id="catButton">
+    <event id="onclick" ref="listCat" remoteUrl="search_product@SUFFIX@"/>
+  </component>
+  <component id="birdButton">
+    <event id="onclick" ref="listBird" remoteUrl="search_product@SUFFIX@"/>
+  </component>
+  <component id="productGrid">
+    <event id="onclick" remoteUrl="search_item@SUFFIX@" finish="loadInventoryTabItems">
+      <param rootNode="request">
+        <source obj="productGrid" node="productId" fromkey="0"/>
+      </param>
+      <result rootNode="response">
+        <target out="items" in="items" inkey="item">
+          <bind node="itemId" tokey="itemId"/>
+          <bind node="productId" tokey="productId"/>
+          <bind node="description" tokey="description"/>
+          <bind node="price" tokey="price"/>
+          <bind node="imageURL" tokey="imageURL"/>
+          <bind node="account" tokey="account"/>
+        </target>
+      </result>
+    </event>
+  </component>
+  <component id="fishImage">
+    <event id="onclick" ref="listFish" remoteUrl="search_product@SUFFIX@"/>
+  </component>
+  <component id="dogImage">
+    <event id="onclick" ref="listDog" remoteUrl="search_product@SUFFIX@"/>
+  </component>
+  <component id="iguanaImage">
+    <event id="onclick" ref="listIguana" remoteUrl="search_product@SUFFIX@"/>
+  </component>
+  <component id="catImage">
+    <event id="onclick" ref="listCat" remoteUrl="search_product@SUFFIX@"/>
+  </component>
+  <component id="birdImage">
+    <event id="onclick" ref="listBird" remoteUrl="search_product@SUFFIX@"/>
+  </component>
+  <component id="continueButton">
+    <event id="onclick" type="local" finish="continueShopping"/>
+  </component>
+  <component id="checkoutButton">
+    <event id="onclick" type="local" finish="checkout"/>
+  </component>
+</eventDef>

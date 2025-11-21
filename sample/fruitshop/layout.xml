@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layoutDef>
+  <layout name="fruitshop">
+    <tabFolder name="orderTabFolder" left="12" top="48" width="685" height="553" tabIndex="0" isClosable="false" widthTabName="80">
+      <tabItem name="addOrderTabItem" title="受注登録">
+        <frame name="customerSearchFrame" left="10" top="19" width="661" height="133" title="顧客情報">
+          <label name="customerIdLabel" left="11" top="11" text="顧客コード:"/>
+          <codeLib name="customerIdText" left="83" top="11" width="107" tabIndex="1" alwaysRefresh="true" codeWidth="73" url="./codelib@SUFFIX@"/>
+          <button name="searchCustomerButton" left="203" top="11" width="88" widthMin="88" title="検索" alt="" tabIndex="2"/>
+          <label name="customerNameLabel" left="11" top="47" text="顧客名:"/>
+          <label name="customerName" left="83" top="47" text=""/>
+          <label name="zipCodeLabel" left="335" top="47" text="郵便番号:"/>
+          <label name="zipCode" left="407" top="47" text=""/>
+          <label name="addressLabel" left="335" top="71" text="住所:"/>
+          <label name="address" left="407" top="71" text=""/>
+          <label name="phoneNumberLabel" left="11" top="71" text="電話番号:"/>
+          <label name="phoneNumber" left="83" top="71" text=""/>
+          <label name="faxNumberLabel" left="11" top="95" text="FAX 番号:"/>
+          <label name="faxNumber" left="83" top="95" text=""/>
+          <label name="contactPersonLabel" left="335" top="95" text="担当者名:"/>
+          <label name="contactPerson" left="407" top="95" text=""/>
+        </frame>
+        <frame name="productSearchFrame" left="10" top="175" width="661" height="73" title="商品情報">
+          <label name="productIdLabel" left="11" top="11" text="商品コード:"/>
+          <codeLib name="productIdText" left="83" top="11" width="107" tabIndex="3" alwaysRefresh="true" codeWidth="73" url="./codelib@SUFFIX@"/>
+          <button name="searchProductButton" left="203" top="11" width="88" widthMin="88" title="検索" alt="" tabIndex="4"/>
+          <label name="productNameLabel" left="335" top="11" text="商品名:"/>
+          <label name="productName" left="407" top="11" text=""/>
+          <label name="unitPridceLabel" left="335" top="35" text="単価:"/>
+          <label name="unitPrice" left="407" top="35" text=""/>
+          <label name="quantityLabel" left="11" top="35" text="数量:"/>
+          <text name="quantityText" left="83" top="35" width="73" tabIndex="5" initValue=""/>
+          <label name="unitLabel" left="167" top="35" text="個"/>
+          <button name="addOrderDetailButton" left="203" top="35" width="88" widthMin="88" title="追加" alt="" tabIndex="6"/>
+        </frame>
+        <frame name="orderDetailFrame" left="10" top="271" width="661" height="246" title="受注明細">
+          <grid name="orderDetailGrid" left="11" top="11" tabIndex="0" height="193" multiSelect="true" rang="10" switchable="false">
+            <gridHeader width="100" title="商品コード" type="string"/>
+            <gridHeader width="200" title="商品名" type="string"/>
+            <gridHeader width="80" title="単価" type="number"/>
+            <gridHeader width="80" title="数量" type="number"/>
+            <gridHeader width="100" title="受注金額" type="number"/>
+          </grid>
+          <label name="totalAmountLabel" left="11" top="215" text="合計金額:"/>
+          <label name="totalAmount" left="83" top="215" text="0"/>
+          <button name="removeOrderDetailButton" left="419" top="215" width="88" widthMin="88" title="選択行を削除" alt="" tabIndex="7"/>
+          <button name="registOrderButton" left="539" top="215" width="88" widthMin="88" title="受注登録" alt="" tabIndex="8"/>
+        </frame>
+      </tabItem>
+      <tabItem name="listOrderTabItem" title="受注一覧">
+        <grid name="orderListGrid" left="10" top="19" tabIndex="0" height="493">
+          <gridHeader width="120" title="受注番号" type="string"/>
+          <gridHeader width="80" title="受注日" type="date"/>
+          <gridHeader width="70" title="顧客コード" type="string"/>
+          <gridHeader width="160" title="顧客名" type="string"/>
+          <gridHeader width="70" title="合計金額" type="number"/>
+        </grid>
+        <button name="updateOrderListButton" left="574" top="19" width="88" widthMin="88" title="更新" alt="" tabIndex="-1"/>
+      </tabItem>
+      <tabItem name="manageCustomerTabItem" title="マスタ管理">
+        <frame name="customerDetailFrame" left="10" top="19" width="661" height="133" title="顧客情報">
+          <button name="registNewCustomerButton" left="551" top="95" width="88" widthMin="88" title="登録" alt="" tabIndex="15"/>
+          <label name="newCustomerNameLabel" left="11" top="23" text="顧客名:"/>
+          <text name="newCustomerNameText" left="83" top="23" width="157" tabIndex="9" initValue=""/>
+          <label name="newZipCodeLabel" left="263" top="23" text="郵便番号:"/>
+          <text name="newZipCodeText" left="335" top="23" width="80" tabIndex="10" initValue=""/>
+          <label name="newAddressLabel" left="263" top="47" text="住所:"/>
+          <text name="newAddressText" left="335" top="47" width="301" tabIndex="12" initValue=""/>
+          <label name="newPhoneNumberLabel" left="11" top="47" text="電話番号:"/>
+          <text name="newPhoneNumberText" left="83" top="47" width="97" tabIndex="11" initValue=""/>
+          <label name="newFaxNumberLabel" left="11" top="71" text="FAX 番号:"/>
+          <text name="newFaxNumberText" left="83" top="71" width="97" tabIndex="13" initValue=""/>
+          <label name="newContactPersonLabel" left="263" top="71" text="担当者名:"/>
+          <text name="newContactPersonText" left="335" top="71" width="80" tabIndex="14" initValue=""/>
+        </frame>
+      </tabItem>
+    </tabFolder>
+    <image name="logoImage" left="456" top="0" alternateText="" imageOn="" imageOut="images/logo.png"/>
+  </layout>
+</layoutDef>

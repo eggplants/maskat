@@ -1,0 +1,42 @@
+DIV.maskWidgetInDesign
+                    { display : block;
+                      position:absolute;
+                      font-size : 0.5;
+                      top : 0;
+                      left : 0;
+                      background: url(../images/quadrillage.gif) repeat;
+                      border : 2px red solid;  
+                      overflow:hidden;
+                    }
+
+DIV.maskWidgetInDesignSel
+                    { display : block;
+                      position:absolute;
+                      font-size : 0.5;
+                      top : 0;
+                      left : 0;
+                      border : 2px solid blue;
+                      overflow:hidden;
+                      background-color : #99CCFF;
+                    }
+
+DIV.maskWidgetInDesign_withoutOverflowHidden_debug
+                    { display : block;
+                      position:absolute;
+                      font-size : 0.5;
+                      top : 0;
+                      left : 0;
+                      background: url(../images/quadrillage.gif) repeat;
+                      border : 12px solid blue;
+/*                      overflow:hidden;*/
+                    }
+DIV.maskWidgetInDesign_withoutBorder_debug
+                    { display : block;
+                      position:absolute;
+                      font-size : 0.5;
+                      top : 0;
+                      left : 0;
+                      background: url(../images/quadrillage.gif) repeat;
+                      overflow:hidden;
+                    }
+                     

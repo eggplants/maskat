@@ -1,0 +1,640 @@
+/* ************************************************************************************************
+
+	Copyright (c) 2005-2006, IGR
+	All Rights Reserved.
+	Licensed under the Apache License version 2.0 or above.
+	For more information on licensing, see:
+        http://www.apache.org/licenses/
+
+
+ ************************************************************************************************
+ 
+ /****************START BEHAVIOR.CSS ********************/
+
+/* style of the ghost for  dragAndDrop */
+.DDinfoFrame {
+					  position:absolute;
+                      font-size : 0.7em;
+                      border: 1px  solid black; 
+                      background-color : gray;
+                      width : auto;
+                      height: 15px;
+                      color : white;
+}
+DIV.g_HL {
+	position : absolute;
+	font-size : 0.5em;
+	height:0px; 
+	clip : rect(0,auto,2,0);
+}	
+DIV.g_VL {
+	position : absolute;
+	font-size : 0.5em;
+	width:0px; 
+	clip : rect(0,2,auto,0);
+}	
+
+DIV.g_green 	 {border:1px solid green;}
+DIV.g_lightBlue  {border:1px solid lightBlue;}
+DIV.g_red 		 {border:1px solid red;}
+
+DIV.g_dashed 	 {border-style : dashed;}
+
+DIV.line {
+	position : absolute;
+	font-size : 0.5em;
+}	
+DIV.horizontal{
+	height:0px; 
+	border :5px solid gray;
+/*	clip : rect(0,auto,5,0);*/
+}
+DIV.vertical{
+	border :5px solid gray;
+	width:0px; 
+}
+DIV.greenBorder 	 {border:1px solid green;}
+DIV.aquamarineBorder {border:1px solid lightBlue;}
+DIV.redBorder 		 {border:1px solid red;}
+
+DIV.dashed {border-style : dashed;}
+
+
+
+/*  dash frame */
+DIV.ghostDD_frame,DIV.fantomeDD_cadre
+                    { position:absolute;
+                      font-size : 0.5em;
+                      border: 1px #C0C0FF dashed;
+                     /* visibility:hidden;*/
+                      display:none;
+                     }
+/*  colored and flat */
+DIV.ghostDD_rect
+                    { position:absolute;
+                      font-size : 0.5;
+                      background-color: #C0C0FF;
+                   /*  visibility:hidden; */
+                      display:none;
+		/*	border:2px solid red;*/
+                     }
+DIV.ghostDD_rect,DIV.fantomeDD_aPlat
+                    { position:absolute;
+                      font-size : 0.5;
+                      background-color: #C0C0FF;
+                   /*  visibility:hidden; */
+                      display:none;
+                     }
+                     
+DIV.ghostDD_icone_DD_def                 
+					{ position:absolute;
+                      font-size : 0.5;
+                      border: 1px  dashed red; /*#C0C0FF;*/
+                      width : 15px;
+                      height: 15px;
+                      display:none;
+                    }
+
+DIV.fantomeDD_iconeDD_1
+                    { position:absolute;
+                      font-size : 0.5;
+                      width : 15px;
+                      height: 15px;
+                      border : 1px green dashed;
+                      display:none;
+                    }
+                     
+DIV.maskSelectDD
+                    { position:absolute;
+                      font-size : 0.5;
+                      top : 0;
+                      left : 0;
+                      background-color : gold;
+                    }
+
+/*   style of the ghost in the resize*/
+
+/*  dash frame */
+DIV.fantomeRS_cadre
+                    { position:absolute;
+                      font-size : 0.5;
+                      border: 2px #C0C0FF dashed;
+                      visibility:hidden;
+                     }
+/*  colored and flat */
+DIV.fantomeRS_aPlat
+                    { position:absolute;
+                      font-size : 0.5;
+                      background-color: #C0C0FF;
+                      visibility:hidden;
+                     }
+                     
+/****************  END BEHAVIOR.CSS ********************/
+
+/****************START CODELABEL.CSS ********************/
+.codeLabel_divGen {
+      overflow:auto;
+      position:absolute;
+      height:30;
+}
+
+
+/****************  END CODELABEL.CSS ********************/
+
+
+
+/****************START CURSOR.CSS ********************/
+.curseurZoneFixe {
+    /* default but can be change at the initalisation of the partition*/
+    top    : 0;
+    left   : 0;
+    width  : 100px;
+    height : 100px;
+    background-color : green;
+}
+.curseurZoneTirette {
+    /* largeur de la tirette */
+    width  : 4px;
+    height : 4px;
+    
+    background-color : lightblue;
+    border : 1px solid black;
+}
+/****************  END CURSOR.CSS ********************/
+
+
+/****************  START POPUP ********************/
+
+
+.ecranMasqueGris ,.ecranMasqueTransparent{
+	position : absolute;
+	width :  100%;
+	height :100%;    
+	z-index: 10001;	
+	top:0;
+	left:0;
+}
+
+.ecranMasqueGris {background:url(../images/imgFenSimple/transoverlay.gif) repeat;}
+
+.ecranMasqueTransparent {background:url(../images/imgFenSimple/transparent.gif) repeat;}
+
+
+/****************  END POPUP ********************/
+
+
+/****************************************/
+div.btonHidden,
+
+div.btonModeOnglOff,   div.btonModeOnglOn,
+
+div.btonFenReducOff,   div.btonFenReducOn,
+div.btonFenRestaurOff, div.btonFenRestaurOn,
+div.btonFenMaxOff, div.btonFenMaxOn,
+div.btonFenFermOff,    div.btonFenFermOn,
+
+div.btonModeFenOff,   div.btonModeFenOn
+{
+    height: 19px;
+    width:20px;
+}
+div.btonHidden {
+    display:none;
+    background: url(../images/imgFenSimple/transparent.gif) no-repeat;
+}
+
+div.btonModeOnglOn {
+    background: url(../images/boutons/icon-fenetre_on.gif) no-repeat;
+}
+div.btonModeOnglOff {
+    background: url(../images/boutons/icon-fenetre.gif) no-repeat;
+}
+
+div.btonFenReducOn {
+    background: url(../images/boutons/icon-reduir_on.gif) no-repeat;
+}
+div.btonFenReducOff {
+    background: url(../images/boutons/icon-reduir.gif) no-repeat;
+}
+div.btonFenRestaurOn {
+    background: url(../images/boutons/icon-multifenetre_on.gif) no-repeat;
+}
+div.btonFenRestaurOff {
+    background: url(../images/boutons/icon-multifenetre.gif) no-repeat;
+}
+div.btonFenMaxOn {
+    background: url(../images/boutons/icon-agrandir_on.gif) no-repeat;
+}
+div.btonFenMaxOff {
+    background: url(../images/boutons/icon-agrandir.gif) no-repeat;
+}
+div.btonFenFermOn {
+    background: url(../images/boutons/icon-fermer_on.gif) no-repeat;
+}
+div.btonFenFermOff {
+    background: url(../images/boutons/icon-fermer.gif) no-repeat;
+    width:20px;
+    height:19px;
+}
+
+div.btonModeFenOn {
+    background: url(../images/boutons/icon-multifenetre_on.gif) no-repeat;
+}
+div.btonModeFenOff {
+    background: url(../images/boutons/icon-multifenetre.gif) no-repeat;
+}
+/* ne fonctionne pas avec IE : */
+div.btonFenReduc:hover {
+    height: 19px;
+    width:20px;
+    background: url(../images/boutons/icon-reduir_on.gif) no-repeat;
+}
+/****************  END DIV3D.CSS ********************/
+
+/****************START MENU.CSS ********************/
+
+.divMenu {
+    padding-top:3px;    
+    background-color:#D3E7F7;
+    border:1px outset white;
+    position:absolute;
+    white-space:nowrap;
+}
+
+.divMenuFixe {    
+    border:1px inset white;
+    position:absolute;        
+    background-color: white;  
+}
+
+.fleche{
+   float:right;
+   position:absolute;
+   top:3;   
+}
+
+
+
+.textItem{
+   float:left;
+   position:relative;
+   height:100%;   
+   left:5px;
+   overflow:hidden;  
+   white-space:nowrap;      
+   font-family:Arial,Helvetica,sans-serif;
+   cursor:pointer;
+   font-size: 13px;    
+}
+
+.textItemSel{
+    font-weight:bold;   
+}
+
+.imgItem{
+   
+   position:relative;
+   height:100%;
+   float:left;  
+}
+
+
+
+.divItemInactif{
+    height:100%;    
+    font-family: arial;
+    font-size: 13px;
+    color:inactivecaption;             
+}
+
+.divItemOn { 
+    background-color:#B0C4DE ;
+    color:highlighttext;   
+}
+
+.divItemInactifOn { 
+    background-color:#B0C4DE ;    
+}
+
+/***new MENU***/
+.imgItemMenu {    
+    position:relative;
+    float:left;
+    width:19px;
+    height:100%;
+    left:0;
+    font-size: 0.5em;                
+    
+}
+
+
+
+
+.itemText{            
+    float:left;        
+    height:100%;
+    position:relative;
+    cursor:pointer;    
+    font-family:arial;
+    font-size:10pt;
+    overflow:hidden;   
+    white-space:nowrap;    
+    }
+/****************  END MENU.CSS ********************/
+
+/****************START PRINT.CSS ********************/
+
+.tabImp {
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:9pt;    
+    font-weight:bold;    
+}
+
+.lineText {
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:9pt;    
+    font-weight:bold; 
+    background-color:rgb(233,236,244);/* bleuté*/
+    width:100%; height:20px;
+}
+.ligneImp{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:8pt;    
+}
+
+/****************  END PRINT.CSS ********************/
+
+
+/****************START TAB.CSS ********************/
+
+
+
+.ContenuOnglet{
+ z-index:1; 
+ overflow:auto; 
+ width:100%;
+ height:100%;  
+ position:absolute;
+ }
+
+
+
+/****************  END TAB.CSS ********************/
+
+/****************START TREEVIEW.CSS ********************/
+
+.DivText{        
+    position:absolute;        
+    top:3px;	
+    font-family: arial;
+    font-size: 9pt;    
+    overflow: hidden;
+    white-space: nowrap;                    
+    cursor: pointer; 
+   }
+
+.textSel{    
+    color: #00CCFF;    
+    font-weight: bold;
+  
+}
+
+
+.NodeSel{    
+    font-weight: bold;
+}
+
+
+.Tree_DIVSUP{    
+    white-space: nowrap;                    
+}
+
+.divTree{                        
+    position:relative;
+    font-size:0;    
+}
+
+.divLeaf{                
+    height:25px;
+}
+
+.divFloat{
+    display:inline;
+}
+
+.imgTreeview{ 
+	overflow:hidden;   
+    position:absolute;        
+    width:19px;   
+    height:23px; 
+}
+
+.treeDivDD{
+   z-index:1000;
+   font-size:0; 
+   position:absolute;  
+   height:2px;
+   width:40px;
+   background-color:#99CCFF;
+}
+/****************  END TREEVIEW.CSS ********************/
+
+/****************  START FIREBUG.CSS ********************/
+
+
+.toolbar {
+    height: 14px;
+    border-top: 1px solid ThreeDHighlight;
+    border-bottom: 1px solid ThreeDShadow;
+    padding: 2px 6px;
+    background: ThreeDFace;
+}
+
+.toolbarRight {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+}
+
+#log {
+    overflow: auto;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+#commandLine {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 18px;
+    border: none;
+    border: 1px outset white;
+}
+
+/************************************************************************************************/
+
+.logRow {
+    position: relative;
+    border-bottom: 1px solid #D7D7D7;
+    padding: 2px 4px 1px 6px;
+    background-color: #FFFFFF;
+    font-family: Lucida Grande, Tahoma, sans-serif;
+    font-size: 11px;
+}
+
+.logRow-command {
+    font-family: Monaco, monospace;
+    color: blue;
+}
+
+.objectBox-null {
+    padding: 0 2px;
+    border: 1px solid #666666;
+    background-color: #888888;
+    color: #FFFFFF;
+}
+
+.objectBox-string {
+    font-family: Monaco, monospace;
+    color: red;
+    white-space: pre;
+}
+
+.objectBox-number {
+    color: #000088;
+}
+
+.objectBox-function {
+    font-family: Monaco, monospace;
+    color: DarkGreen;
+}
+
+.objectBox-object {
+    color: DarkGreen;
+    font-weight: bold;
+}
+
+/************************************************************************************************/
+
+.logRow-info,
+.logRow-error,
+.logRow-warning {
+    background: #FFFFFF no-repeat 2px 2px;
+    padding-left: 20px;
+    padding-bottom: 3px;
+}
+
+.logRow-info {
+    background-image: url(../images/debug/infoIcon.png);
+}
+
+.logRow-warning {
+    background-color: cyan;
+    background-image: url(../images/debug/warningIcon.png);
+}
+
+.logRow-error {
+    background-color: LightYellow;
+    background-image: url(../images/debug/errorIcon.png);
+}
+
+.errorMessage {
+    vertical-align: top;
+    color: #FF0000;
+}
+
+.objectBox-sourceLink {
+    position: absolute;
+    right: 4px;
+    top: 2px;
+    padding-left: 8px;
+    font-family: Lucida Grande, sans-serif;
+    font-weight: bold;
+    color: #0000FF;
+}
+
+/************************************************************************************************/
+
+.logRow-group {
+    background: #EEEEEE;
+    border-bottom: none;
+}
+
+.logGroup {
+    background: #EEEEEE;
+}
+
+.logGroupBox {
+    margin-left: 24px;
+    border-top: 1px solid #D7D7D7;
+    border-left: 1px solid #D7D7D7;
+}
+
+/************************************************************************************************/
+
+.selectorTag,
+.selectorId,
+.selectorClass {
+    font-family: Monaco, monospace;
+    font-weight: normal;
+}
+
+.selectorTag {
+    color: #0000FF;
+}
+
+.selectorId {
+    color: DarkBlue;
+}
+
+.selectorClass {
+    color: red;
+}
+
+/************************************************************************************************/
+
+.objectBox-element {
+    font-family: Monaco, monospace;
+    color: #000088;
+}
+
+.nodeChildren {
+    margin-left: 16px;
+}
+
+.nodeTag {
+    color: blue;
+}
+
+.nodeValue {
+    color: #FF0000;
+    font-weight: normal;
+}
+
+.nodeText,
+.nodeComment {
+    margin: 0 2px;
+    vertical-align: top;
+}
+
+.nodeText {
+    color: #333333;
+}
+
+.nodeComment {
+    color: DarkGreen;
+}
+
+/************************************************************************************************/
+
+.propertyNameCell {
+    vertical-align: top;
+}
+
+.propertyName {
+    font-weight: bold;
+}
+
+/****************  END FIREBUG.CSS ********************/

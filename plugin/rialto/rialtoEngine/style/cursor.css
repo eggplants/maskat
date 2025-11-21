@@ -1,0 +1,16 @@
+.curseurZoneFixe {
+    /* par défaut mais modifiable à la création des partitions*/
+    top    : 0;
+    left   : 0;
+    width  : 100px;
+    height : 100px;
+    background-color : green;
+}
+.curseurZoneTirette {
+    /* largeur de la tirette */
+    width  : 4px;
+    height : 4px;
+    
+    background-color : lightblue;
+    border : 1px solid black;
+}

@@ -1,0 +1,89 @@
+@CHARSET "UTF-8";
+/*************** デフォルトのLiveValidationで使用するCSS *********************/
+.LV_valid {
+    color:#00CC00;
+}    
+.LV_invalid {
+	color:#CC0000;	
+}
+.LV_validation_message{
+    font-weight:bold;
+    margin:0 0 0 5px;   
+}   
+.LV_valid_field,
+input.LV_valid_field:hover, 
+input.LV_valid_field:active,
+textarea.LV_valid_field:hover, 
+textarea.LV_valid_field:active,
+.fieldWithErrors input.LV_valid_field,
+.fieldWithErrors textarea.LV_valid_field {
+    border: 1px solid #00CC00;
+}   
+.LV_invalid_field, 
+input.LV_invalid_field:hover, 
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover, 
+textarea.LV_invalid_field:active,
+.fieldWithErrors input.LV_invalid_field,
+.fieldWithErrors textarea.LV_invalid_field {
+    border: 1px solid #CC0000;
+}
+/***** FloatMessageLiveValidation, FloatAndAlertMessageLiveValidation用CSS ****/
+.LV_valid_float {
+    color:#00CC00;
+}
+.LV_invalid_float {
+	color:#CC0000;	
+}
+/* フロートメッセージのスタイル*/
+.LV_validation_message_float{
+	border:0.5px solid #999999;
+	z-index:10000;
+	background-color:#FFFFCC;	
+	padding: 3px;
+	font-size:12px;
+	color:#000000;
+}
+/* 検証結果OKとなったコンポーネントのスタイル*/
+/*
+.LV_valid_field_float {
+    border: 1px solid #00CC00;
+}
+*/   
+/* エラーとなったコンポーネントのスタイル*/
+.LV_invalid_field_float{
+    border: 1px solid #CC0000;
+    background-color:#FFEEEE;
+}
+/********************** BulkMessageLiveValidation用CSS ************************/
+.LV_valid_bulk {
+    color:#00CC00;
+}    	
+.LV_invalid_bulk {
+	color:#CC0000;	
+}
+/* 一括メッセージエリア内に表示されるエラーメッセージのスタイル */
+.LV_validation_message_bulk{
+	margin:3px;
+	border-bottom : 1px dotted #CCCCCC;
+	font-weight : normal ;
+	font-size : 12px ;
+	padding-left : 10px;
+}
+/* 検証結果OKとなったコンポーネントのスタイル*/
+/*
+.LV_valid_field_bulk {
+    border: 1px solid #00CC00 ;
+}
+*/   
+/* エラーとなったコンポーネントのスタイル */
+.LV_invalid_field_bulk {
+    border: 1px solid #CC0000;
+    background-color:#FFEEEE;
+}
+/* 一括メッセージエリア全体のスタイル */
+/*
+.bulkMessageContainerNode{
+	background-color:#EEEEEE;
+}
+*/

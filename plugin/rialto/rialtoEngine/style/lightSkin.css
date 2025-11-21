@@ -1,0 +1,1444 @@
+/*** DECORATION STYLE****/
+
+.decoration_table{
+		top:0;
+		left:0;
+        position:absolute;       
+        border:0px;
+        border-collapse:collapse;
+        table-layout:fixed;	
+        border:1px outset white;
+}
+
+/** DEFAULT DECORATION **/
+
+.line1,.line5 {height:15px;}
+.line3{height:9px;}
+.line2{height:20px;}
+.line1Cell1,.line1Cell3,.line2Cell1,.line2Cell3,.line3Cell1,.line3Cell3,.line4Cell1,.line4Cell3,.line5Cell1,.line5Cell3 {width:15px;}
+.line1Cell1{background-color:white;}
+.line1Cell2{background-color:white;}
+.line1Cell3{background-color:white;}
+.line2Cell1{background-color:white;}
+.line2Cell2{background-color:white;}
+.line2Cell3{background-color:white;}
+.line3Cell1{background-color:white;}
+.line3Cell2{background-color:white;}
+.line3Cell3{background-color:white;}
+.line4Cell1{background-color:white;}
+.line4Cell2{background-color:white;}
+.line4Cell3{background-color:white;}
+.line5Cell1{background-color:white;}
+.line5Cell2{background-color:white;}
+.line5Cell3{background-color:white;}
+
+
+/*** SIMPLEWINDOW DECORATION****/
+.decoration_table_simplewindow{
+		top:0;
+		left:0;
+        position:absolute;       
+        border:0px;
+        border-collapse:collapse;
+        table-layout:fixed;	
+        border:1px outset white;
+}
+
+.title_simplewindow {
+ font-family:arial;
+ font-size:13pt;
+ font-weight:bold;
+ color:#0265CD;
+ overflow: hidden;
+ white-space:nowrap;
+ /*left: 40px;*/
+ /*position: absolute;*/
+}
+
+.iconG_simplewindow {
+ width: 35px;
+}
+
+.iconD_simplewindow {
+ /*position: absolute;*/
+ width: 28px;
+}
+
+
+
+.line1_simplewindow,.line5_simplewindow {height:15px;}
+.line3_simplewindow{height:9px;}
+.line2_simplewindow{height:23px;}
+.line1Cell1_simplewindow,.line1Cell3_simplewindow,.line2Cell1_simplewindow,.line2Cell3_simplewindow,
+.line3Cell1_simplewindow,.line3Cell3_simplewindow,.line4Cell1_simplewindow,.line4Cell3_simplewindow,
+.line5Cell1_simplewindow,.line5Cell3_simplewindow {width:15px;}
+.line1Cell1_simplewindow{background-color:white;}
+.line1Cell2_simplewindow{background-color:white;}
+.line1Cell3_simplewindow{background-color:white;}
+.line2Cell1_simplewindow{background-color:white;}
+.line2Cell2_simplewindow{background-color:white;}
+.line2Cell3_simplewindow{background-color:white;}
+.line3Cell1_simplewindow{background-color:white;}
+.line3Cell2_simplewindow{background-color:#0265CD;}
+.line3Cell3_simplewindow{background-color:white;}
+.line4Cell1_simplewindow{background-color:white;}
+.line4Cell2_simplewindow{background-color:white;}
+.line4Cell3_simplewindow{background-color:white;}
+.line5Cell1_simplewindow{background-color:white;}
+.line5Cell2_simplewindow{background-color:white;}
+.line5Cell3_simplewindow{background-color:white;}
+
+
+/*** POPUP DECORATION****/
+.decoration_table_popup{
+		top:0;
+		left:0;
+        position:absolute;       
+        border:0px;
+        border-collapse:collapse;
+        table-layout:fixed;	
+        border:2px outset black;
+}
+
+.title_popup{
+ white-space:nowrap;
+ overflow:hidden;
+ font-family:arial;
+ font-size:10pt;
+ font-weight:bold;
+ color:#0265CD;
+}
+
+.line1_popup{height:8px;}
+.line5_popup {height:12px;}
+.line3_popup{height:9px;}
+.line2_popup{height:24px;}
+.line1Cell1_popup,.line1Cell3_popup,.line2Cell1_popup,.line2Cell3_popup,
+.line3Cell1_popup,.line3Cell3_popup,.line4Cell1_popup,.line4Cell3_popup,
+.line5Cell1_popup,.line5Cell3_popup {width:11px;}
+.line1Cell1_popup{background-color:white;}
+.line1Cell2_popup{background-color:white;}
+.line1Cell3_popup{background-color:white;}
+.line2Cell1_popup{background-color:white;}
+.line2Cell2_popup{background-color:white;}
+.line2Cell3_popup{background-color:white;}
+.line3Cell1_popup{background-color:white;}
+.line3Cell2_popup{background-color:white;}
+.line3Cell3_popup{background-color:white;}
+.line4Cell1_popup{background-color:white;}
+.line4Cell2_popup{background-color:white;}
+.line4Cell3_popup{background-color:white;}
+.line5Cell1_popup{background-color:white;}
+.line5Cell2_popup{background-color:white;}
+.line5Cell3_popup{background-color:white;}
+
+
+/*** SPLITTER STYLE****/
+
+.Spliter_div1 {        
+        background-color:#CCCCCC;    
+        overflow:auto;       
+}
+
+.Spliter_div2 {       
+        position:absolute;
+        overflow:auto;        
+}
+
+
+.Spliter_Divcurs_withImg {                
+    border-top:1px solid white;
+	border-bottom:1px solid black;
+	border-left:1px solid white;
+	border-right:1px solid black; 
+	background:#0265CD;
+}
+
+.Spliter_Divcurs_withoutImg {                
+    border-top:1px solid white;
+	border-bottom:1px solid black;
+	border-left:1px solid white;
+	border-right:1px solid black; 
+	background:#BBBBBB;
+}
+
+.Spliter_Boutcurs_withoutImg {            
+    background:#0099CC; 
+}
+
+
+.Spliter_Boutcurs_over {                
+    background:#00CCFF; 
+}
+
+
+/*IMAGE */
+.imgTirrette_h {
+	background-color:#0099CC;
+	width:10px;
+	height:137px;
+}
+
+.imgTirrette_h_on {
+	background-color:#6699CC;
+	width:10px;
+	height:137px;
+}
+
+.imgTirrette_v {
+	background-color:#0099CC;
+	width:83px;
+	height:10px;
+}
+
+.imgTirrette_v_on {
+	background-color:#6699CC;
+	width:83px;
+	height:10px;
+}
+
+/*** POPUP STYLE****/
+/*IMAGE */
+.imgTirrette_popup {
+	position:absolute;
+	background-color:#0099CC;
+	width:83px;
+	height:15px;
+}
+
+
+/*** CALENDAR STYLE****/
+
+
+
+.cal_day_of_week {
+	position:absolute;
+	text-align:center;
+	font-size:8pt;
+	font-weight:bold;
+	font-family:Arial;
+	top:35px;
+	width:25px;
+	height:15px;
+	border-bottom:1px solid #4AA5C9;
+}
+
+
+.cal_current_month{
+	position:absolute;
+	left:45px;
+	width:100px;
+	height:15px;
+	top:7px;
+	text-align:center;
+	font-weight:bold;
+	font-size:8pt;
+	display:inline;
+	font-family:Arial,Helvetica,sans-serif;
+	color:#0069B3;
+}
+
+
+.cal_default_day{	
+	position:absolute;
+	color:#0069B3;
+	border-color:#4AA5C9;
+	border-left-width:0px;
+	border-right-width:0px;	
+	border-bottom-width:0px;
+	border-top-width:0px;
+	
+	border-style:solid;
+	
+	cursor:pointer;        
+    text-align:center;
+    font-size:8pt;
+    font-family:Arial;
+    font-weight:normal;	
+    height:15px;
+    width:25px;	
+}
+
+
+.cal_disable_day{	
+	color:#AAAAAA;
+   	font-style:italic;
+   	cursor:default;
+}
+
+.cal_weekend_day{	
+	color:green; 
+}
+            
+
+.cal_holidays_day{	
+	color:red; 
+}
+
+.cal_today_day{	
+	background-color:#00CCFF;
+}
+
+.cal_select_day{	
+	font-weight:bold;
+	border:1px solid red;
+	height:13px;
+    width:23px;	
+}
+
+/*** BUTON STYLE****/
+
+
+.centerButtonOn,.centerButtonOff,.centerButtonDisa{
+position: relative;
+float:left;
+overflow:hidden;
+height:18px; 
+left:0;
+top:0;
+}
+.centerButtonOn{
+background-color:#66CC99;
+}
+
+.centerButtonOff{
+background-color:#3399FF;
+}
+
+.centerButtonDisa{
+background-color: #888888;
+}
+
+.leftEdgeButtonOn,.leftEdgeButtonDisa,.leftEdgeButtonOff,.rightEdgeButtonOn,.rightEdgeButtonDisa,.rightEdgeButtonOff{
+position: relative;
+float:left;
+top:0;
+left:0;
+font-size: 0.5em;    
+width:4px;
+height:18px;
+}
+
+.leftEdgeButtonOn {    
+    background-color:#66CC99;
+}
+
+.leftEdgeButtonDisa {    
+   background-color: #888888;
+}
+
+.leftEdgeButtonOff {    
+   background-color:#3399FF;
+}
+
+.rightEdgeButtonOn {    
+    background-color:#66CC99;
+}
+
+.rightEdgeButtonDisa {    
+   background-color: #888888;
+}
+
+.rightEdgeButtonOff {    
+    background-color:#3399FF;
+}
+
+.textButtonOff,.textButtonDisa,.shadowTextButton,.textButtonOn{
+position:absolute;
+width:100%;
+height:100%;
+text-align:center;
+font-weight:bold;
+font-size:8pt;
+font-family:Arial,Helvetica,sans-serif;
+left:0;
+top:2;
+}
+
+.textButtonOn {color: white;}
+.textButtonOff {color: white;}
+
+.shadowTextButton{
+left:1;
+top:2;
+color:gray;
+}
+
+.textButtonDisa {color: #AAAAAA;}
+
+/*** TOOLBAR  STYLE****/
+
+.leftEdgeToolbar {    
+    background-color: #CCCCCC;
+    float:left;
+    font-size: 0.5em;    
+    top:0;
+    left:0;
+    width:4px;
+    height:25px;
+}
+
+.toolBarDiv{
+	background-color: #CCCCCC;
+    height:25px;
+ }
+
+.rightEdgeToolbar {    
+	background-color: #CCCCCC;
+    float:right;
+    font-size: 0.5em;    
+    top:0;
+    left:0;
+    width:4px;
+    height:25px;
+}
+
+/*** FRAME  STYLE****/
+/*title*/
+.frame_titlecbig {
+        top:3px;
+        position:absolute;
+        font-size:8pt;
+        font-family:Arial;        
+        color:blue;
+        text-align:left;
+        display: inline;
+        overflow: hidden;
+        white-space:nowrap;                 
+        width:90%;
+ }
+.frame_titlecsmall {
+        font-size:8pt;
+        font-family:Helvetica;        
+        color:#6699CC;
+        text-align:left;
+        z-index:2;
+        background-color:white;
+}
+
+.frame_content_dynamic{}
+.frame_content_simple{border:1px solid blue}
+
+/*button*/
+.moreButtonOff {
+	background: url(../images/boutons/bouton_plus_off.gif) no-repeat;
+	width:17px;
+	height:17px;
+}
+.moreButtonOn {
+	background: url(../images/boutons/bouton_plus_on.gif) no-repeat;
+	width:17px;
+	height:17px;
+}
+.lessButtonOff {
+	background: url(../images/boutons/bouton_moins_off.gif) no-repeat;
+	width:17px;
+	height:17px;
+}
+.lessButtonOn {
+	background: url(../images/boutons/bouton_moins_on.gif) no-repeat;
+	width:17px;
+	height:17px;
+}
+.maxButtonOff {
+	background: url(../images/boutons/icon-agrandir.gif) no-repeat;
+	width:20px;
+	height:19px;
+}
+.maxButtonOn {
+	background: url(../images/boutons/icon-agrandir_on.gif) no-repeat;
+	width:20px;
+	height:19px;
+}
+
+.minButtonOff {
+	background: url(../images/boutons/icon-multifenetre.gif) no-repeat;
+	width:20px;
+	height:19px;
+}
+.minButtonOn {
+	background: url(../images/boutons/icon-multifenetre_on.gif) no-repeat;
+	width:20px;
+	height:19px;
+}
+
+
+.printButtonOff {
+	background: url(../images/boutons/bouton_imprimer_off.gif) no-repeat;
+	width:81px;
+	height:17px;
+}
+.printButtonOn {
+	background: url(../images/boutons/bouton_imprimer_on.gif) no-repeat;
+	width:81px;
+	height:17px;
+}
+
+/*************************  TAB STYLE *************************************
+
+*************************/
+
+/*global area*/
+.tabGlobalContent{
+border : 1px solid black;
+}
+
+/*title tab*/
+.tabTitleContent_t,.tabTitleContent_b{
+height:21Px;
+}
+.tabTitleContent_l,.tabTitleContent_r{
+width:21px;
+}
+
+
+
+/*area which contains the image (close button,navigation button)*/
+.tab_imgArea_t{
+    float:right;
+    height:21px;
+    border:1px solid black;
+    border-bottom:0px solid black;        
+    border-top:1px solid black;        	
+    position: relative;
+    top:0px;
+}
+
+.tab_imgArea_b{
+    float:right;
+    height:21px;
+    border:1px solid black;
+    border-bottom:1px solid blackB;        
+    border-top:0px solid black;        	
+    position: relative;
+    top:0px;
+}
+
+/*list style*/
+.tab_tirette {
+	background-color:#0099CC;
+	width:13px;
+	height:30px;
+	position:absolute;
+}
+
+.tab_list{
+    padding-top:3px;    
+    background-color:#D3E7F7;
+    border:1px outset white;
+    position:absolute;
+    white-space:nowrap;    
+}
+
+.tab_list_item,.tab_list_item_hilite {
+    position:relative;    
+    padding-left:5px;
+    cursor:pointer;        
+    font-family:arial;
+    font-size:10pt;    
+    height:22px;
+    overflow:hidden;   
+    white-space:nowrap;    
+}
+.tab_list_item  {     
+    color:black;    
+}
+
+.tab_list_item_hilite {
+    background-color:#B0C4DE ;
+    color:white;
+}
+
+.tab_list_visibleArea{  
+    left:0;
+    border:2px solid #425CBE;
+    position:absolute;
+}
+
+/*button in the image area
+
+with 
+off-->normal style
+on--->mouse over style
+GroundlessOff:disable
+*/
+
+/*close buton*/
+.crossCloseOff {
+	background: url(../images/croix.gif) no-repeat;
+	width:12px;
+	height:11px;
+}
+.crossCloseOn {
+	background: url(../images/croix_on.gif) no-repeat;
+	width:12px;
+	height:11px;
+}
+
+/*previous buton*/
+.leftArrowOff {
+	background: url(../images/fleches/flech_g_off.gif) no-repeat;
+	width:13px;
+	height:13px;
+}
+
+.leftArrowOn {
+	background: url(../images/fleches/flech_g_on.gif) no-repeat;
+	width:13px;
+	height:13px;
+}
+
+.leftArrowGroundlessOff {
+	background: url(../images/fleches/flech_g_sob_off.gif) no-repeat;
+	width:13px;
+	height:13px;
+}	
+
+
+/*open list buton*/
+.tabListOn {
+	background: url(../images/boutons/parcourir_on.gif) no-repeat;
+	width:13px;
+	height:13px;
+}
+.tabListOff {
+	background: url(../images/boutons/parcourir_off.gif) no-repeat;
+	width:13px;
+	height:13px;
+}
+
+/*previous buton*/
+.rightArrowGroundlessOff {
+	background: url(../images/fleches/flech_d_sob_off.gif) no-repeat;
+	width:13px;
+	height:13px;
+}	
+
+.rightArrowOff {
+	background: url(../images/fleches/flech_d_off.gif) no-repeat;
+	width:13px;
+	height:13px;
+}	
+.rightArrowOn {
+	background: url(../images/fleches/flech_d_on.gif) no-repeat;
+	width:13px;
+	height:13px;
+}	
+
+
+/*TABITEM 
+	
+ _________________________________________
+|1 |2			tabTitleText		   |3 |
+|__|___________________________________|__|
+
+1. leftEdgeTab
+2. tabTitle
+3. rightEdgeTab
+
+with 
+off-->normal style
+on--->mouse over style
+disa->disable style
+_h for horizontal tab
+_v for vertical tab
+*************************/
+
+.tabTitleDivOn_t,.tabTitleDivOff_t,.tabTitleDivDisa_t {
+ height:100%;
+ position: relative;
+ float:left;
+ overflow:hidden;
+ font-style: normal;
+}
+
+.tabTitleDivOn_t { 
+ z-index: 2; 
+ left:0px;
+ top:0px;
+ border:1px solid black;
+ border-bottom-width: 0px;
+}
+
+
+.tabTitleDivOff_t { 
+ top:0px;
+ z-index: 0;  
+ cursor: pointer;  
+ border:1px inset black;
+ border-bottom-width: 0px;
+ background-color:#CCCCCC;
+}
+
+.tabTitleDivDisa_t { 
+ font-style: italic;
+}
+
+.leftEdgeTabOn_t {    
+    float:left;
+    font-size: 0.5;    
+    top:1;
+    left:0;
+    width:3px;
+    height:100%;
+}
+.leftEdgeTabOff_t {        
+    float:left;
+    font-size: 0.5;    
+    top:0;
+    left:0;
+    width:3px;
+    height:100%;
+}
+.rightEdgeTabOn_t {    
+    float:left;
+    font-size: 0.5;    
+    top:1;
+    width:3px;
+    height:100%;
+}
+.rightEdgeTabOff_t {
+    float:left;
+    font-size: 0.5em;    
+    top:0;
+    width:3px;
+    height:100%;
+}
+
+.tabTitleTextOn_t {
+	top:1;
+	height:100%;
+    font-weight: bold;    
+    float:left;
+    text-align: center;
+    font-size: 10pt;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #000000;
+    overflow: hidden;
+    white-space:nowrap;    
+ }
+
+.tabTitleTextOff_t {  
+    padding-top:3px;
+    float:left;
+    text-align: center;
+    font-size: 10pt;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #999999;
+    overflow: hidden;  
+    white-space:nowrap;	
+}
+
+
+.tabTitleDivOn_b,.tabTitleDivOff_b,.tabTitleDivDisa_b {
+ height:100%;
+ position: relative;
+ float:left;
+ overflow:hidden;
+ font-style: normal;
+}
+
+.tabTitleDivOn_b { 
+ z-index: 2; 
+ left:0px;
+ top:-1px;
+}
+
+
+.tabTitleDivOff_b { 
+ top:0px;
+ z-index: 0;  
+ cursor: pointer;  
+}
+
+.tabTitleDivDisa_b { 
+ font-style: italic;
+}
+
+.leftEdgeTabOn_b {        
+    float:left;
+    font-size: 0.5;    
+    top:0;
+    left:0;
+    width:3px;
+    height:100%;
+}
+.leftEdgeTabOff_b {    
+    float:left;
+    font-size: 0.5;    
+    top:0;
+    left:0;
+    width:3px;
+    height:100%;
+}
+.rightEdgeTabOn_b {   
+    float:left;
+    font-size: 0.5;    
+    top:0;
+    width:3px;
+    height:100%;
+}
+.rightEdgeTabOff_b {   
+    float:left;
+    font-size: 0.5em;    
+    top:0;
+    width:3px;
+    height:100%;
+}
+
+.tabTitleTextOn_b {
+	height:100%;
+    font-weight: bold;    
+    float:left;
+    text-align: center;
+    font-size: 10pt;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #000000;
+    overflow: hidden;
+    white-space:nowrap;      
+ }
+
+.tabTitleTextOff_b { 
+	height:100%;
+    padding-top:3px;
+    float:left;
+    text-align: center;
+    font-size: 10pt;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #999999;
+    overflow: hidden;  
+    white-space:nowrap;
+}
+
+
+
+
+.tabTitleDivOn_l,.tabTitleDivOff_l,.tabTitleDivDisa_l {
+ width:100%;
+ position: relative;
+ overflow:hidden;
+ font-style: normal;
+}
+
+.tabTitleDivOn_l { 
+ z-index: 2; 
+ left:0px;
+ border:1px inset black;
+ border-right-width: 0px;
+}
+
+
+.tabTitleDivOff_l { 
+  z-index: 0;  
+ cursor: pointer; 
+ border:1px inset black;
+ border-right-width: 0px;
+ background-color:#CCCCCC; 
+ }
+
+.tabTitleDivDisa_l { 
+ font-style: italic;
+}
+
+.leftEdgeTabOn_l {    
+    
+    font-size: 0.5;    
+    width:100%;
+    height:3px;
+}
+.leftEdgeTabOff_l {    
+    
+    font-size: 0.5;    
+    width:100%;
+    height:3px;
+}
+.rightEdgeTabOn_l {
+   
+    font-size: 0.5;    
+    width:100%;
+    height:3px;
+}
+.rightEdgeTabOff_l {
+    
+    font-size: 0.5;    
+    width:100%;
+    height:3px;
+}
+
+.tabTitleTextOn_l {
+    font-weight: bold;    
+    text-align: center;
+    font-size: 10pt;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #000000;
+    overflow: hidden;
+    white-space:nowrap;    
+    
+ }
+
+.tabTitleTextOff_l {  
+    padding-left:3px;
+    text-align: center;
+    font-size: 10pt;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #999999;
+    overflow: hidden;  
+    white-space:nowrap;
+	
+}
+
+
+
+.tabTitleDivOn_r,.tabTitleDivOff_r,.tabTitleDivDisa_r {
+ width:100%;
+ position: relative;
+ overflow:hidden;
+ font-style: normal;
+}
+
+.tabTitleDivOn_r { 
+ z-index: 2; 
+ left:-1px;
+}
+
+
+.tabTitleDivOff_r { 
+  z-index: 0;  
+ cursor: pointer;  
+ }
+
+.tabTitleDivDisa_r { 
+ font-style: italic;
+}
+
+.leftEdgeTabOn_r {    
+    
+    font-size: 0.5;    
+    width:100%;
+    height:3px;
+}
+.leftEdgeTabOff_r {    
+   
+    font-size: 0.5;    
+    width:100%;
+    height:3px;
+}
+.rightEdgeTabOn_r {
+    
+    font-size: 0.5;    
+    width:100%;
+    height:3px;
+}
+.rightEdgeTabOff_r {
+    
+    font-size: 0.5;    
+    width:100%;
+    height:3px;
+}
+
+.tabTitleTextOn_r {
+    font-weight: bold;    
+    text-align: center;
+    font-size: 10pt;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #000000;
+    overflow: hidden;
+    white-space:nowrap;    
+  
+ }
+
+.tabTitleTextOff_r {  
+    padding-right:3px;
+    text-align: center;
+    font-size: 10pt;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #999999;
+    overflow: hidden;  
+    white-space:nowrap;
+	
+}
+
+/**** TEXT FIELD   *****/
+.field_global {
+       border-width:0px;
+       border-style:solid;
+       border-color:black;
+       margin:0px;
+       height:0px;
+       top:0px;
+       font-size:8pt;
+       font-family:Arial;
+       font-weight:bold;
+       color:black;
+       text-align:left;       
+}
+
+
+.field_T {
+	border:2px solid blue; 
+}
+.field_A,.field_I,.field_N,.field_D,.field_DA,.field_DT,.field_Hi,.field_H,.field_P{
+	border:1px inset rgb(212,208,200); 
+	background-color:#E2F4FF;
+}
+
+.field_A,.field_Hi,.field_H,.field_P{
+        font-size:8pt;
+        font-family:Arial;
+        color:black;
+        text-align:left;
+}
+
+.field_I {
+        font-size:8pt;
+        font-family:Arial;
+        color:black;
+        text-align:center;
+}
+
+.field_N {
+        font-size:8pt;
+        font-family:Arial;
+        color:black;
+        text-align:right;
+}
+
+.field_D,.field_DA,.field_DT {
+        font-size:8pt;
+        font-family:Arial;
+        color:black;
+        text-align:center;
+        display: inline;
+}
+
+.field_desable {
+	color:gray;    
+    background-color :#DDDDDD;	
+}
+
+.field_required {
+	border:1px solid blue;
+}
+
+.codeLabel_label{
+	border:1px inset rgb(212,208,200);
+	background-color:#FFFFCC;
+	font-size:8pt;
+    font-family:Arial;
+    color:black;
+    text-align:left;
+}
+
+/* buton*/
+.pinkHelpButton {
+	background: url(../images/help1.gif) no-repeat;
+	width:25px;
+	height:24px;
+}
+.redHelpButton {
+	background: url(../images/help2.gif) no-repeat;
+	width:25px;
+	height:24px;
+}
+
+
+/*** COMBO STYLE ***/
+
+.combo_input{
+    border:1px solid black;
+    height:22px;
+    position:relative;
+    font-size:10pt;    
+    background-color:#99CCFF;    
+    color:white;
+    float:left;
+}
+
+
+
+.combo_bouton {    
+    position:relative;
+    cursor:pointer;        
+    width:15px;
+    height:20px;     
+    float:right;
+	border:1px solid black;
+}
+
+
+
+.combo_list {
+    border:1px inset black;
+    color:white;
+    background-color:#99CCFF;
+    padding:1px;        
+    overflow:hidden;        
+    font-size:10pt;
+    font-family:arial;        
+}
+
+.bigDownArrow {
+	background: url(../images/fleches/arrowGreenBottom.gif) no-repeat;
+	width:15px;
+	height:20px;
+}
+.bigUpArrow {
+	background: url(../images/fleches/arrowGreenTop.gif) no-repeat;
+	width:15px;
+	height:20px;
+}
+
+/** Menu item **/
+
+.itemMenuOff {            
+
+}
+
+.itemMenuOn {            
+    background-color:#B0C4DE ;    
+    color:white;    
+}
+
+
+/**** NAVIGATION BUTON   *****/
+.btonFirstDoctOn, .btonFirstDoctOff,.btonFirstDoctSobOn, .btonFirstDoctSobOff,
+.btonLastDoctOn, .btonLastDoctOff,.btonLastDoctSobOn, .btonLastDoctSobOff,
+.btonPrevDoctOn, .btonPrevDoctOff,.btonPrevDoctSobOff,.btonPrevDoctSobOn,
+.btonNextDoctOn, .btonNextDoctOff,.btonNextDoctSobOff,.btonNextDoctSobOn,
+.espaceSepNavigListeOn, .espaceSepNavigListeOff,
+.btonFinListeOn,.btonFinListeOff,.btonFinListeSobOn,.btonFinListeSobOff
+{
+    height: 13px;
+    width:13px;
+}
+/* fleches First doct */
+div.btonFirstDoctOn {
+    background: url(../images/fleches/flechplus_g_on.gif) no-repeat;
+}
+div.btonFirstDoctOff {
+    background: url(../images/fleches/flechplus_g_off.gif) no-repeat;
+}
+div.btonFirstDoctSobOn {
+    background: url(../images/fleches/flechplus_g_sob_on.gif) no-repeat;
+}
+div.btonFirstDoctSobOff {
+    background: url(../images/fleches/flechplus_g_sob_off.gif) no-repeat;
+}
+
+/* Arrow Previous element */
+div.btonPrevDoctOn {
+    background: url(../images/fleches/flech_g_on.gif) no-repeat;
+}
+div.btonPrevDoctOff {
+    background: url(../images/fleches/flech_g_off.gif) no-repeat;
+}
+div.btonPrevDoctSobOn {
+    background: url(../images/fleches/flech_g_sob_on.gif) no-repeat;
+}
+div.btonPrevDoctSobOff {
+        background: url(../images/fleches/flech_g_sob_off.gif) no-repeat;
+}
+/* Arrow next element  */
+div.btonNextDoctOn {
+    background: url(../images/fleches/flech_d_on.gif) no-repeat;
+}
+div.btonNextDoctOff {
+    background: url(../images/fleches/flech_d_off.gif) no-repeat;
+}
+div.btonNextDoctSobOn {
+    background: url(../images/fleches/flech_d_sob_on.gif) no-repeat;
+}
+div.btonNextDoctSobOff {
+    background: url(../images/fleches/flech_d_sob_off.gif) no-repeat;
+}
+/* Arrow last element  */
+div.btonLastDoctOn {
+    background: url(../images/fleches/flechplus_d_on.gif) no-repeat;
+}
+
+div.btonLastDoctOff {
+    background: url(../images/fleches/flechplus_d_off.gif) no-repeat;
+}
+/* fleches fin Liste */
+div.btonFinListeOn {
+    background: url(../images/fleches/flechplus_d_on.gif) no-repeat;
+}
+div.btonFinListeOff {
+    background: url(../images/fleches/flechplus_d_off.gif) no-repeat;
+}
+div.btonFinListeSobOff {
+    background: url(../images/fleches/flechplus_d_sob_off.gif) no-repeat;
+}
+div.btonFinListeSobOn {
+    background: url(../images/fleches/flechplus_d_sob_on.gif) no-repeat;
+}
+
+/*************************  GRID  STYLE *************************************
+
+
+*************************/
+
+
+/*--- image of the navigation area -------- */
+.leftEdgeRoundDashBoard {
+	background-color: white;
+	width:22px;
+	height:24px;
+}
+.rightEdgeRoundDashBoard {
+	background-color: white;
+	width:22px;
+	height:24px;
+}
+.grid_navigationArea{
+position:relative;
+width:280px;
+height:24px;
+}
+
+.grid_navigationTextArea{
+position:absolute;
+width:236px;
+left:22px;
+background-color:#C3D7F0;
+height:100%;
+}
+
+
+/*fleche de tri*/
+.arrowUp,.arrowDown{
+ padding: 0;
+ overflow: hidden;
+ position:relative;
+ float:right; 
+ top:4px;
+ width:10px;
+height:10px;
+}
+
+.arrowUp{
+	background: url(../images/imgTableau/upsimple.png) no-repeat;
+}
+
+.arrowDown{
+	background: url(../images/imgTableau/downsimple.png) no-repeat;
+}
+
+/*image de coche*/
+.coche{
+ padding: 0;
+ overflow: hidden;
+ position:relative;
+ float:left; 
+ top:3px;
+ left:0px;
+ background: url(../images/imgTableau/coche.gif) no-repeat;
+ width:12px;
+ height:9px;
+}
+
+
+.cellSep{         
+   width:3px;
+   /*background-image:url(../images/imgTableau/fillet.gif);*/
+   background-color:#045AC7;
+   float:left;   
+   font-size:0;   
+   height:100%;  
+}
+
+/*zone de texte de la zone de navigation*/
+.Div_text
+{
+font-size:10pt;
+position:relative;
+top:4px;
+left:40px;
+width:145px;
+height:24px;
+text-align:center;
+float:left;
+font-family:Arial,Helvetica,sans-serif;
+color:#666666;
+overflow:hidden;   
+white-space:nowrap;   
+}
+
+.grid_header{
+height:24px;
+}
+
+/*Cellule de l'entete  */
+.header_right_img,.header_left_img,.header_cell{
+   position:relative;   
+   float:left;   
+   height:100%;
+   width:8px;    
+}
+
+.header_left_img{
+   background-color:#C3D7F0;
+}
+
+.header_right_img{
+   background-color:#C3D7F0;
+}
+.header_cell{
+   background-color: #C3D7F0;
+}
+
+.header_cell_text{
+   position:absolute;  
+   left:5;
+   color:black;
+   font-weight:bold;   
+   overflow:hidden;
+   font-size:9pt;
+   height:100%;   
+   width:85%;   
+   white-space:nowrap;      
+   font-family:Arial,Helvetica,sans-serif; 
+}
+
+
+
+.grid_data{
+  position:relative;   
+  width:100%;  
+  font-size:0;
+  overflow:auto;
+}
+
+
+
+/*cellule de data */
+.grid_cellDecR1,.grid_cellDecR2,.grid_cellDecL1,.grid_cellDecL2,.grid_cellData{
+	position:relative;
+   	float:left;   
+   	height:100%;   
+}
+
+
+.grid_cellDecR1,.grid_cellDecR2,.grid_cellDecL1,.grid_cellDecL2{        
+   width:8px;   
+}
+
+.grid_cellDecL1{
+	/*background:url(../images/imgTableau/bordblanc_g.gif) no-repeat;*/	
+}
+
+.grid_cellDecR1{
+	/*background:url(../images/imgTableau/bordblanc_d.gif) no-repeat;*/
+}
+
+
+.imgCell
+{      
+   position:relative;   
+   height:100%; 
+   width:100%;
+}
+
+/*ligne de data */
+.grid_line1,.grid_line2{ 
+ cursor:pointer;  
+ position:relative;  
+ overflow:hidden;
+ color:black; 
+}
+
+.grid_line1{
+	background-color:#FBFBFB;
+}
+.grid_line_over{
+   color:#6699CC;
+   font-weight:bold;
+   cursor:pointer;
+}
+
+.grid_line_sel{
+   color:red; 
+}
+
+
+
+/*texte de cellule de data */
+.grid_textData{
+   left:5px;
+   position:relative;  
+   height:95%;
+   width:95%;   
+   overflow:hidden;   
+   white-space:nowrap;      
+   font-family:Arial,Helvetica,sans-serif;   
+   font-size:9pt;        
+}
+
+/*****  LABEL CLASSNAME ******/
+/*********************DIFFERENTS LIBELLES UTILISES*************************/
+.libNormal {        
+        font-size:10pt;
+        font-family:Arial;
+        color:black;
+        text-align:left;
+        font-weight:normal;       
+}
+
+.libelle1 {        
+        font-size:8pt;
+        font-family:Arial;
+        font-weight:bold;
+        color:black;
+        text-align:left;        
+}
+
+
+.libelleRVSel {
+        font-size:8pt;
+        font-family:Arial;
+        color:red;
+        text-align:left;
+}
+
+
+.libelle2 {
+        font-size:8pt;
+        font-family:Arial;
+        font-weight:bold;
+        color:#0066CC;
+        text-align:left;
+}
+
+.libelle3 {
+        font-size:10pt;
+        font-family:Arial;
+        font-weight:bold;
+        color:gray;        
+}
+
+.libelle4 {
+        font-size:10pt;
+        font-family:Arial;
+        font-weight:bold;
+        color:blue;
+        text-align:left;
+}
+
+.libelWhite {        
+        font-size:10pt;
+        font-family:Arial;
+        font-weight:bold;
+        color:white;
+        text-align:left;
+}
+
+.libelleCopy {        
+        font-size:7pt;
+        font-family:Arial;
+        font-weight:bold;
+        color:#0066CC;
+        text-align:left;
+}
+
+/*must be the last one */
+.inactif {color:#BBBBBB;}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<log4javascript enabled="true" showStackTraces="true">
+<logger name="maskat.core">
+	<appenderRef name="simple"/>
+</logger>
+<logger name="maskat.control">
+	<appenderRef name="simple"/>
+</logger>
+<logger name="maskat.event">
+	<appenderRef name="simple"/>
+	<appenderRef name="inpage"/>
+	<appenderRef name="browser"/>
+	<appenderRef name="alert"/>
+</logger>
+<popUpAppender name="json" threshold="DEBUG">
+	<jsonLayout/>
+</popUpAppender>
+<popUpAppender name="simple" threshold="DEBUG">
+	<simpleLayout/>
+</popUpAppender>
+<inPageAppender name="inpage" threshold="DEBUG"/>
+<browserConsoleAppender name="browser" />
+<alertAppender name="alert" />
+</log4javascript>

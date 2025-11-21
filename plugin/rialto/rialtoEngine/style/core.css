@@ -1,0 +1,61 @@
+/*****************style global à tous les objets***************************/
+
+/*********************DIFFERENTS LIBELLES UTILISES*************************/
+.libNormal {        
+        font-size:10pt;
+        font-family:Arial;
+        color:black;
+        text-align:left;
+        font-weight:normal;       
+}
+
+.libelle1 {        
+        font-size:8pt;
+        font-family:Arial;
+        font-weight:bold;
+        color:black;
+        text-align:left;        
+}
+
+
+.libelleRVSel {
+        font-size:8pt;
+        font-family:Arial;
+        color:red;
+        text-align:left;
+}
+
+
+.libelle2 {
+        font-size:8pt;
+        font-family:Arial;
+        font-weight:bold;
+        color:#0066CC;
+        text-align:left;
+}
+
+.libelle3 {
+        font-size:10pt;
+        font-family:Arial;
+        font-weight:bold;
+        color:gray;        
+}
+
+.libelle4 {
+        font-size:10pt;
+        font-family:Arial;
+        font-weight:bold;
+        color:blue;
+        text-align:left;
+}
+
+.libelleCopy {        
+        font-size:7pt;
+        font-family:Arial;
+        font-weight:bold;
+        color:#0066CC;
+        text-align:left;
+}
+
+/*doit toujours être en dernier*/
+.inactif {color:#BBBBBB;}

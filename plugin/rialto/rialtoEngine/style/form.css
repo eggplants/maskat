@@ -1,0 +1,199 @@
+
+
+.div-cadre {
+        /*background-color:#F3F3F3;*/
+        overflow:auto;        
+}
+
+.div-titlecsmall {
+        font-size:8pt;
+        font-family:Arial;        
+        color:#01278C;
+        text-align:left;
+        z-index:2;
+        background-color:rgb(239,240,239);
+}
+
+.div-titlecbig {
+        top:3px;
+        position:absolute;
+        font-size:8pt;
+        font-family:Arial;        
+        color:#26AB04;
+        text-align:left;
+        display: inline;
+        overflow: hidden;
+/* fx        text-overflow: ellipsis;*/
+        white-space:nowrap;                 
+        width:90%;
+ }
+
+.champs-div {
+        border-width:0px;
+        border-style:solid;
+        border-color:black;
+        margin:0px;
+        height:0px;
+        top:0px;
+        font-size:8pt;
+        font-family:Arial;
+        font-weight:bold;
+        color:black;
+        text-align:left;
+}
+
+.img-div {
+        overflow:hidden;
+        background-color:inherit;
+}        
+
+
+.champs-alpha {
+        font-size:8pt;
+        font-family:Arial;
+        color:black;
+        text-align:left;
+}
+
+.champs-dossier {
+        font-size:8pt;
+        font-family:Arial;
+        color:black;
+        text-align:center;
+}
+
+.champs-num {
+        font-size:8pt;
+        font-family:Arial;
+        color:black;
+        text-align:right;
+}
+
+.champs-date {
+        font-size:8pt;
+        font-family:Arial;
+        color:black;
+        text-align:center;
+        display: inline;
+}
+
+
+.calendar-zoneprincipale {
+/* fx       cursor:hand;*/
+        cursor:pointer;        
+        text-align:center;
+        border:0;
+        font-size:8pt;
+        font-family:Arial;
+        font-weight:normal;
+ }
+
+
+.calendar-Jour {
+         position:absolute;
+         text-align:center;
+        font-size:8pt;
+        font-weight:bold;
+        font-family:Arial;
+        top:35px;
+        width:25px;
+        height:15px;
+        border-bottom:1px solid #4AA5C9;
+}
+
+
+.Div_MoisEnCours
+{
+position:absolute;
+left:45px;
+width:100px;
+height:15px;
+top:7px;
+text-align:center;
+font-weight:bold;
+font-size:8pt;
+display:inline;
+font-family:Arial,Helvetica,sans-serif;
+color:#0069B3;
+
+}
+/*STYLE DU BOUTON*/
+
+.centerButtonOn,.centerButtonOff,.centerButtonDisa{
+position: relative;
+float:left;
+overflow:hidden;
+/*height:18px; */
+left:0;
+top:0;
+}
+.centerButtonOn{
+background: url(../images/boutons/center_on.gif) repeat;
+}
+
+.centerButtonOff{
+background: url(../images/boutons/center_off.gif) repeat;
+}
+
+.centerButtonDisa{
+background: url(../images/boutons/center_disa.gif) repeat;
+}
+
+.leftEdgeButtonOn,.leftEdgeButtonDisa,.leftEdgeButtonOff,.rightEdgeButtonOn,.rightEdgeButtonDisa,.rightEdgeButtonOff
+{
+position: relative;
+float:left;
+top:0;
+left:0;
+font-size: 0.5em;    
+width:4px;
+/*height:18px;*/
+}
+
+.leftEdgeButtonOn {    
+    background-image: url(../images/boutons/left_on.gif);
+}
+
+.leftEdgeButtonDisa {    
+    background-image: url(../images/boutons/left_disa.gif);
+}
+
+.leftEdgeButtonOff {    
+    background-image: url(../images/boutons/left_off.gif);
+}
+
+.rightEdgeButtonOn {    
+    background-image: url(../images/boutons/right_on.gif);
+}
+
+.rightEdgeButtonDisa {    
+    background-image: url(../images/boutons/right_disa.gif);
+}
+
+.rightEdgeButtonOff {    
+    background-image: url(../images/boutons/right_off.gif);
+}
+
+
+.textButton,.textButtonDisa,.shadowTextButton{
+position:absolute;
+width:100%;
+height:100%;
+text-align:center;
+font-weight:bold;
+font-size:8pt;
+font-family:Arial,Helvetica,sans-serif;
+left:0;
+top:2;
+}
+
+.textButton {color: #EEEEEE;}
+
+.shadowTextButton{
+left:1;
+top:2;
+color:gray;
+}
+
+.textButtonDisa {color: #AAAAAA;}
+

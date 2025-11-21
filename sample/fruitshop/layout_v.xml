@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<livevalidation layout="fruitshop">
+
+	<!-- ****************** 受注登録タブの入力値検証設定 ******************* -->
+	<!-- 顧客コード -->
+	<component id="customerIdText">
+		<rule name="Validate.Presence">
+			<message>顧客コードを入力してください。</message>
+		</rule>
+		<!-- 一括検証実行時のみ検証を実行します。-->
+		<validator onlyOnSubmit="true" />
+	</component>
+
+	<!-- 顧客検索ボタン押下時の一括検証設定 -->
+	<component id="searchCustomerButton">
+		<massValidate eventType="onclick">
+			<target ref="customerIdText" />
+		</massValidate>
+	</component>
+
+	<!-- 商品コード -->
+	<component id="productIdText">
+		<rule name="Validate.Presence">
+			<message>商品コードを入力してください。</message>
+		</rule>
+		<!-- 一括検証実行時のみ検証を実行します。-->
+		<validator onlyOnSubmit="true" />
+	</component>
+
+	<!-- 数量 -->
+	<component id="quantityText">
+		<rule name="Validate.Presence">
+			<message>数量を入力してください。</message>
+		</rule>
+		<rule name="Validate.Numericality">
+			<message>数量は1以上の整数で入力してください。</message>
+			<param name="onlyInteger" value="true" />
+			<param name="minimum" value="1" />
+		</rule>
+	</component>
+
+	<!-- 商品検索ボタン押下時の一括検証設定 -->
+	<component id="searchProductButton">
+		<massValidate eventType="onclick">
+			<target ref="productIdText" />
+		</massValidate>
+	</component>
+
+
+	<!-- 商品追加ボタン押下時の一括検証設定 -->
+	<component id="addOrderDetailButton">
+		<massValidate eventType="onclick">
+			<target ref="productIdText" />
+			<target ref="quantityText" />
+		</massValidate>
+	</component>
+
+
+	<!-- ****************** 顧客登録タブの入力値検証設定 ******************* -->
+	<!-- 顧客名 -->
+	<component id="newCustomerNameText">
+		<rule name="Validate.Presence">
+			<message>顧客名を入力してください。</message>
+		</rule>
+	</component>
+
+	<!-- 電話番号 -->
+	<component id="newPhoneNumberText">
+		<rule name="Validate.Presence">
+			<message>電話番号を入力してください。</message>
+		</rule>
+		<rule name="Validate.Format">
+			<message>電話番号の形式が不正です。入力可能な文字は数字、およびハイフンのみです。</message>
+			<param name="pattern" value="^\d{2,4}-\d{2,4}-\d{4}$" />
+		</rule>
+	</component>
+
+	<!-- FAX 番号 -->
+	<component id="newFaxNumberText">
+		<rule name="Validate.Format">
+			<message>FAX 番号の形式が不正です。</message>
+			<param name="pattern"
+				value="^[0-9]{2,4}-[0-9]{2,4}-[0-9]{4}$" />
+		</rule>
+	</component>
+
+	<!-- 郵便番号 -->
+	<component id="newZipCodeText">
+		<rule name="Validate.Presence">
+			<message>東京都の郵便番号を入力してください。</message>
+		</rule>
+		<rule name="Validate.Length">
+			<message>郵便番号はハイフンなしで7桁で入力してください</message>
+			<param name="is" value="7" />
+		</rule>
+		<rule name="Validate.Format">
+			<message>郵便番号の形式が不正です。\n入力可能な文字は数字のみです。</message>
+			<param name="pattern" value="^[0-9]{7}$" />
+		</rule>
+		<rule name="isValidZipCode">
+			<message>存在しない東京都の郵便番号が入力されています。</message>
+		</rule>
+	</component>
+
+	<!-- 住所 -->
+	<component id="newAddressText">
+		<rule name="Validate.Presence">
+			<message>住所を入力してください。</message>
+		</rule>
+	</component>
+
+	<!-- 担当者名 -->
+	<component id="newContactPersonText">
+		<rule name="Validate.Presence">
+			<message>担当者名を入力してください。</message>
+		</rule>
+	</component>
+
+	<!-- 顧客登録ボタン押下時の一括検証設定 -->
+	<component id="registNewCustomerButton">
+		<massValidate eventType="onclick">
+			<target ref="newCustomerNameText" />
+			<target ref="newPhoneNumberText" />
+			<target ref="newFaxNumberText" />
+			<target ref="newZipCodeText" />
+			<target ref="newAddressText" />
+			<target ref="newContactPersonText" />
+		</massValidate>
+	</component>
+
+</livevalidation>

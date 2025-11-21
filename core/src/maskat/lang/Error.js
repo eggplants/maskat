@@ -1,0 +1,79 @@
+/*
+ * Copyright (c)  2006-2011 Maskat Project.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @class マスカットフレームワーク用のエラークラスです。
+ *
+ * <p>
+ * マスカットフレームワークで新しいエラークラスを定義する場合、このクラスを
+ * 継承する必要があります。
+ * </p>
+ *
+ * @name maskat.lang.Error
+ */
+maskat.lang.Class.declare("maskat.lang.Error").extend("Error", {
+
+	/** @scope maskat.lang.Error.prototype */
+
+	/**
+	 * コンストラクタです。
+	 *
+	 * @param key エラーメッセージのメッセージキー
+	 * @param param エラーのパラメータ
+	 * @param cause このエラーの原因となった下位レベルのエラー
+	 */
+	initialize: function(key, param, cause){
+		this.message = maskat.util.Message.format(key, param);
+		this.key = key;
+		this.param = param;
+		this.cause = cause;
+	},
+
+	/**
+	 * エラーメッセージの配列を返します。
+	 *
+	 * このエラーが下位レベルのエラーを含んでいる場合、エラーチェーンの
+	 * 順番に従ってメッセージが格納されます。
+	 *
+	 * @returns エラーメッセージの配列
+	 */
+	getMessages: function() {
+		var messages = [];
+
+		var error = this;
+		do {
+			messages.push(error.message);
+			error = error.cause;
+		} while (error);
+
+		return messages;
+	},
+
+	/**
+	 * 原因となるエラーを返します。
+	 * 
+	 * @return 原因となるエラー
+	 */
+	getCauseError: function() {
+		var e = this;
+		if (e) {
+			while (e.cause) {
+				e = e.cause;
+			}
+		}
+		return e;
+	}
+
+});

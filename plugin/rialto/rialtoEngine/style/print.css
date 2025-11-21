@@ -1,0 +1,124 @@
+
+.tabImp {
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:9pt;    
+    font-weight:bold;    
+}
+
+.lineText {
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:9pt;    
+    font-weight:bold; 
+    background-color:rgb(233,236,244);/* bleuté*/
+    width:100%; height:20px;
+}
+.ligneImp{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:8pt;    
+}
+
+
+.bandeau-libelleTypDoss{
+        font-family:Arial,Helvetica,sans-serif;
+        font-size:10pt;
+        color:#0069B3;
+}
+
+.bandeau-libelleCte1{
+        color:#0069B3;
+        font-family:Arial,Helvetica,sans-serif;
+        font-size:9pt;
+}
+
+.bandeau-libelleCte2{
+        color:#0069B3;
+        font-family:Arial,Helvetica,sans-serif;
+        font-size:9pt;
+        font-weight:bold;
+}
+
+.bandeau-divMin{        
+        white-space: nowrap;
+        color:#0069B3;
+        font-family:Arial,Helvetica,sans-serif;
+        font-size:9pt;        
+        height:30px;
+        /*border:1px outset #0099CC;*/
+        position:absolute;
+}
+
+.bandeau-fiche{
+         position:absolute;        
+         top:11px;
+         overflow: hidden;
+         /* fx        text-overflow: ellipsis;*/
+         white-space: nowrap;
+         /*border:1px solid red;*/
+}
+
+.bandeau-divDetailPat{
+         position:absolute;
+         /*border:1px solid black;*/
+         left:0px;
+         top:0px;
+}
+
+
+.bandeau-divData {
+        font-family:verdana,Arial,Helvetica;
+        font-size:10pt;
+        height:100%;
+        width:100%;
+        overflow: hidden;
+       /* fx        text-overflow: ellipsis;*/
+        white-space: nowrap;
+        position:absolute;
+        /*border:1px solid red;*/
+}
+
+.bandeau-nomReel{
+         display:inline;
+         font-weight:bold;         
+}
+
+.bandeau-tableau_dataFiche{    
+  border-collapse:collapse;
+  table-layout:fixed;
+
+}
+
+.bandeau-divTableau {
+    border:1px solid #666666;
+    background-color:white;
+    padding:1px;
+    font-size:10pt;
+    font-family:arial;
+    position:absolute;
+    top:85px;
+}
+
+
+.bandeau-divTableau table {
+        table-layout:fixed;
+        border-collapse:collapse;
+        border-right: 1px outset white;
+}
+
+.bandeau-Lignesel {
+	/* fx    cursor:hand;*/        
+        cursor:pointer;
+        background-color:#B0C4DE ;
+        border:1px solid;
+        color:white;
+        font-family:verdana;
+        font-size:9pt;
+}
+.bandeau-Lignenonsel   {
+       /* fx    cursor:hand;*/
+        cursor:pointer;
+        background-color:white;
+        border:1px solid white;
+        color:black;
+        font-family:verdana;
+        font-size:9pt;
+}

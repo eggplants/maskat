@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maskat" default="all" basedir=".">
+
+  <property file="build.properties" />
+
+  <property name="build" value="${basedir}/build" />
+  <property name="dist" value="${basedir}/dist" />
+  <property name="doc" value="${basedir}/doc" />
+  <property name="lib" value="${basedir}/lib" />
+  <property name="sample" value="${basedir}/sample" />
+
+  <property name="core.dir" value="${basedir}/core" />
+  <property name="core.src" value="${core.dir}/src" />
+  <property name="target.dir" value="${build}/maskat/core" />
+  <property name="target.js" value="${target.dir}/maskat.js" />
+
+  <taskdef resource="net/sf/antcontrib/antcontrib.properties"
+           classpath="${lib}/ant-contrib/ant-contrib-1.0b3.jar" />
+
+  <target name="prepare">
+    <tstamp>
+      <format property="TODAY_UK" pattern="yyyyMMdd" />
+    </tstamp>
+    <mkdir dir="${target.dir}"/>
+    <condition property="js.compress.enabled">
+      <istrue value="${js.compress}" />
+    </condition>
+  </target>
+
+  <target name="all"
+          depends="build,plugins,sample,jsdoc"
+          description="マスカットフレームワーク、プラグイン、サンプル、API ドキュメントをすべてビルドします。" />
+
+  <target name="build"
+          depends="prepare,compress,copy"
+          description="マスカットフレームワークをソースコードからビルドします。" />
+
+  <target name="compile">
+    <concat destfile="${target.js}"
+            append="false"
+            encoding="${js.encoding}">
+      <filelist dir="${core.src}/maskat" files="bootstrap.js,loader.js,lang.js" />
+      <!-- <fileset dir="${core.src}/maskat" includes="**/*.js" excludes="*.js, **/package-info.js" /> -->
+      <fileset dir="${core.src}/maskat" includes="**/*.js" excludes="*.js, **/package-info.js, event/*.js" />
+      <fileset dir="${core.src}/maskat/event" includes="**/*.js" excludes="**/package-info.js" />
+    </concat>
+
+    <replace file="${target.js}" encoding="${js.encoding}">
+      <replacefilter token="@build@" value="v${TODAY_UK}" />
+      <replacefilter token="@version@" value="${maskat.version}" />
+    </replace>
+  </target>
+
+  <target name="compress" depends="compile" if="js.compress.enabled">
+    <copy file="${target.js}" tofile="${target.js}.uncompressed" />
+    <java jar="${lib}/yuicompressor/yuicompressor-2.3.6.jar" fork="true">
+      <arg value="--type" />
+      <arg value="js" />
+      <arg value="--charset" />
+      <arg value="${js.encoding}" />
+      <arg value="-o" />
+      <arg file="${target.js}" />
+      <arg file="${target.js}.uncompressed" />
+    </java>
+  </target>
+
+  <target name="copy">
+    <copy todir="${build}/maskat" file="${core.src}/properties.json" />
+    <copy todir="${build}">
+      <fileset dir="${basedir}" includes="*.txt" />
+    </copy>
+
+    <copy todir="${target.dir}">
+      <fileset file="${core.src}/messages.json" />
+      <fileset dir="${core.dir}">
+        <exclude name="src" />
+        <exclude name="src/**/*" />
+        <exclude name="test" />
+        <exclude name="test/**/*" />
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="plugins"
+          depends="prepare"
+          description="マスカットフレームワークに同梱されるプラグインをすべてビルドします。">
+    <foreach target="build-plugin" param="plugin.dir">
+      <path>
+        <dirset dir="${basedir}" includes="plugin*/*" />
+      </path>
+    </foreach>
+  </target>
+
+  <target name="build-plugin" if="plugin.dir">
+    <basename property="plugin.name" file="${plugin.dir}" />
+    <ant antfile="build-plugin.xml" inheritall="false" target="build">
+      <property name="plugin.dir" value="${plugin.dir}" />
+      <property name="plugin.name" value="${plugin.name}" />
+    </ant>
+  </target>
+
+  <target name="sample"
+          description="マスカットのサンプルアプリケーションをビルドします。">
+    <copy todir="${build}/sample">
+      <fileset dir="${sample}" excludes="**/*.xml" />
+    </copy>
+    <copy todir="${build}/sample" encoding="${js.encoding}">
+      <fileset dir="${sample}" includes="**/*.xml" />
+      <filterset>
+        <filter token="SUFFIX" value="${action.url.suffix}" />
+      </filterset>
+    </copy>
+  </target>
+
+  <target name="deploy"
+          depends="build,plugins,sample"
+          description="マスカットのサンプルアプリケーションを deploy.dir プロパティで指定されたディレクトリにコピーします。">
+    <copy todir="${deploy.dir}">
+      <fileset dir="${build}" />
+    </copy>
+  </target>
+
+  <target name="dist"
+          depends="build,plugins"
+          description="マスカットフレームワークの配布ファイルを生成します。">
+    <mkdir dir="${dist}" />
+    <zip destfile="${dist}/maskat-${maskat.version}.v${TODAY_UK}.zip"
+         basedir="${build}"
+         filesonly="true"
+         whenempty="skip"
+         update="false" />
+  </target>
+
+  <target name="clean"
+          description="ビルドによって生成されたファイルを削除します。">
+    <delete dir="${build}" />
+    <delete dir="${doc}/api" />
+  </target>
+
+  <target name="jsdoc"
+          description="マスカットフレームワークの API ドキュメントを生成します。">
+    <mkdir dir="${doc}/api" />
+    <property name="jsdoc" value="${lib}/jsdoc-toolkit" />
+    <java jar="${jsdoc}/jsrun.jar" fork="true">
+      <arg file="${jsdoc}/app/run.js" />
+      <arg path="${core.src}" />
+      <arg value="-d=${doc}/api" />
+      <arg value="-e=${js.encoding}" />
+      <arg value="-r=10" />
+      <arg value="-t=${jsdoc}/templates/jsdoc" />
+    </java>
+  </target>
+</project>

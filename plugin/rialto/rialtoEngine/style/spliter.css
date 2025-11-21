@@ -1,0 +1,58 @@
+/*
+.Spliter-divGen {        
+    background: #CCCCCC;
+    font-size:0;          
+}
+
+.Spliter-div1 {                
+    position:relative;
+    overflow:auto;       
+    font-size:0;        
+}
+
+.Spliter-div2 {       
+    position:relative;       
+    overflow:auto;        
+    font-size:0;
+}
+
+
+.Spliter-Divcurs {                  
+    font-size:0;    
+}
+
+.Spliter-Boutcurs {                
+    font-size:0; 
+    position:relative;
+}
+
+*/
+.Spliter-divGen {        
+        background-color: #CCCCCC;
+        font-size:0;        
+}
+
+.Spliter-div1 {        
+        background-color:#CCCCCC;    
+        position:absolute;
+        overflow:auto;       
+        /*font-size:0;        */
+}
+
+.Spliter-div2 {       
+        position:absolute;
+        background-color:#CCCCCC;
+        overflow:auto;        
+        /*font-size:0;*/
+}
+
+
+.Spliter-Divcurs {                
+    position:absolute;
+    font-size:0; 
+}
+
+.Spliter-Boutcurs {            
+    position:absolute;        
+    font-size:0; 
+}

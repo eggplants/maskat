@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layoutDef>
+  <layout name="gourmet">
+    <googleMap name="map" left="0" top="0" width="637" height="313" continuousZoom="false" doubleClickZoom="true" initialLatitude="35.6811" initialLongitude="139.76712" initialZoomLevel="15" mapControl="large" typeControl="true"/>
+    <frame name="searchFrame" left="0" top="324" width="193" height="241" title="検索条件">
+      <label name="budgetLabel" left="11" top="23" text="予算"/>
+      <combo name="budgetLowerLimitCombo" left="71" top="23" width="76" tabIndex="0">
+        <comboItem text="指定なし" value="0"/>
+        <comboItem text="1000" value="1000"/>
+        <comboItem text="3000" value="3000"/>
+        <comboItem text="5000" value="5000"/>
+      </combo>
+      <label name="budgetLowerLimitLabel" left="155" top="23" text="円"/>
+      <label name="rangeLabel" left="167" top="23" text="～"/>
+      <combo name="budgetUpperLimitCombo" left="71" top="47" width="76" tabIndex="0">
+        <comboItem text="指定なし" value="0"/>
+        <comboItem text="1000" value="1000"/>
+        <comboItem text="3000" value="3000"/>
+        <comboItem text="5000" value="5000"/>
+      </combo>
+      <label name="budgetUpperLimitLabel" left="155" top="47" text="円"/>
+      <label name="styleLabel" left="11" top="95" text="スタイル"/>
+      <checkbox name="westernCheckbox" left="71" top="95" text="洋食" className="" tabIndex="0"/>
+      <checkbox name="japaneseCheckbox" left="71" top="119" text="和食" className="" tabIndex="0"/>
+      <checkbox name="chineseCheckbox" left="71" top="143" text="中華" className="" tabIndex="0"/>
+      <label name="couponLabel" left="11" top="179" text="クーポン"/>
+      <checkbox name="couponCheckbox" left="71" top="179" text="利用可能" className="" tabIndex="0"/>
+    </frame>
+    <tabFolder name="listFolder" left="204" top="324" width="433" height="241" tabIndex="0" isClosable="false">
+      <tabItem name="searchResultTab" title="検索結果">
+        <grid name="searchResultGrid" left="10" top="31" tabIndex="0" height="169" lineHeight="15" rang="10">
+          <gridHeader width="160" title="店名" type="string"/>
+          <gridHeader width="60" title="スタイル" type="string"/>
+          <gridHeader width="60" title="予算" type="number"/>
+          <gridHeader width="60" title="クーポン" type="string"/>
+        </grid>
+        <label name="lblGridHelp" left="10" top="7" text="クリックで地図を移動、ダブルクリックで詳細情報を表示します。"/>
+      </tabItem>
+      <tabItem name="detailTab" title="詳細情報">
+        <label name="restaurantNameLabel" left="10" top="19" text="店名:"/>
+        <text name="nameText" left="58" top="19" width="361" tabIndex="0" initValue=""/>
+        <text name="descriptionText" left="10" top="43" width="409" tabIndex="0" datatype="T" initValue="" rows="7"/>
+      </tabItem>
+    </tabFolder>
+  </layout>
+</layoutDef>
